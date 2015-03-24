@@ -1,0 +1,20 @@
+set -g utf8
+set-window-option -g utf8 on
+
+set -g default-terminal "screen-256color"
+
+# Scrollback history limit
+set -g history-limit 10000
+
+# Window/pane first index (default: 0)
+set-option -g base-index 1
+setw -g pane-base-index 1
+
+# Reload ~/.tmux.conf using PREFIX r
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+# Mouse support
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
