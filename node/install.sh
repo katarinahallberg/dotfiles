@@ -12,7 +12,7 @@ then
   exit
 else
   # Install npm packages globally
-  npm install -g autoprefixer bower csscomb grunt hs http-server live-server nodemon nvm
+  npm install -g autoprefixer bower csscomb grunt http-server live-server nodemon nvm
 fi
 
 exit 0
