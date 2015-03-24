@@ -9,6 +9,9 @@ fi
 
 # Taps to… tap before installing
 taps=(
+  homebrew/dupes
+  homebrew/php
+  homebrew/versions
   completions/gem-completion
 )
 
