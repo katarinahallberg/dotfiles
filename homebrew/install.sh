@@ -9,10 +9,10 @@ fi
 
 # Taps to… tap before installing
 taps=(
-  homebrew/completions
-  homebrew/dupes
-  homebrew/php
-  homebrew/versions
+  "homebrew/completions"
+  "homebrew/dupes"
+  "homebrew/php"
+  "homebrew/versions"
 )
 
 # Tap it!
