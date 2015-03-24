@@ -7,6 +7,14 @@ then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Taps to… tap before installing
+taps=(
+  completions/gem-completion
+)
+
+# Tap it!
+brew tap $(IFS=" "; echo "${taps[*]}")
+
 # Packages to install
 packages=(
   "archey"
