@@ -1,0 +1,4 @@
+# Directory excludes
+excludeDirectories = "{$excludeDirectories,node_modules}"
+includeFiles = "{$includeFiles,.csscomb.json,.editorconfig,.gitignore}"
+includeDirectories = "{$includeDirectories,.git}"
