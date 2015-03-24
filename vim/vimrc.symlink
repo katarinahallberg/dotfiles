@@ -1,0 +1,207 @@
+" Plugin Manager
+" ===========================================================================
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'git@github.com:tpope/vim-sensible.git'
+Plug 'git@github.com:morhetz/gruvbox.git'
+Plug 'git@github.com:scrooloose/syntastic.git'
+Plug 'git@github.com:editorconfig/editorconfig-vim.git'
+Plug 'git@github.com:tpope/vim-fugitive.git'
+Plug 'git@github.com:tpope/vim-endwise.git'
+Plug 'git@github.com:Raimondi/delimitMate.git'
+Plug 'git@github.com:scrooloose/nerdtree.git'
+Plug 'git@github.com:Shougo/neocomplcache.vim.git'
+Plug 'git@github.com:tpope/vim-unimpaired.git'
+Plug 'git@github.com:hail2u/vim-css3-syntax.git'
+Plug 'git@github.com:groenewege/vim-less.git'
+Plug 'git@github.com:mattn/emmet-vim.git'
+Plug 'git@github.com:airblade/vim-gitgutter.git'
+Plug 'git@github.com:scrooloose/nerdcommenter.git'
+Plug 'git@github.com:nelstrom/vim-qargs.git'
+Plug 'git@github.com:wavded/vim-stylus.git'
+Plug 'git@github.com:kien/ctrlp.vim.git'
+
+call plug#end()
+
+
+" Plugs
+" ===========================================================================
+
+" Gruvbox
+" ---------------------------------------------------------------------------
+
+if !has("gui_running")
+   let g:gruvbox_italic=0
+endif
+
+colorscheme gruvbox
+set background=dark
+
+
+
+" Synstastic
+" ---------------------------------------------------------------------------
+
+let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_enable_signs=1
+let g:syntastic_always_populate_loc_list=1
+
+
+
+" NERDTree
+" ---------------------------------------------------------------------------
+
+" Open with Ctrl-n
+map <C-n> :NERDTreeToggle<CR>
+
+" Close vim if NERDTree is last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Open NERDTree on startup
+"autocmd vimenter * NERDTree
+
+
+
+" NEOCOMPLCACHE
+" ---------------------------------------------------------------------------
+
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+
+" Set minimum syntax keyword length.
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+
+
+" delimitMate
+" ---------------------------------------------------------------------------
+let delimitMate_expand_cr = 1
+
+" GitGutter
+" ---------------------------------------------------------------------------
+let g:gitgutter_sign_removed_first_line = "^_"
+
+
+" Search
+" ===========================================================================
+
+set hlsearch                " highlight all results
+set incsearch               " but do highlight as you type your search.
+set ignorecase              " make searches case-insensitive...
+set smartcase               " ... unless they contain at least one capital letter
+set gdefault                " have :s///g flag by default on"
+
+
+
+" Visual Stuff
+" ===========================================================================
+
+set number                  " show line numbers
+set colorcolumn=80          " ruler at 80 chars width
+set cursorline              " highlight the current line
+set history=200             " remember a lot of stuff
+set ruler                   " Always show info along bottom.
+
+
+
+" Files
+" ===========================================================================
+
+set autoread                " auto-reload files changed on disk
+set updatecount=0           " disable swap files
+set nobackup
+set noswapfile
+
+
+
+" Indentation
+" ===========================================================================
+
+set cindent
+set autoindent              " auto-indent
+set tabstop=2               " tab spacing
+set softtabstop=2           " unify
+set shiftwidth=2            " indent/outdent by 2 columns
+set shiftround              " always indent/outdent to the nearest tabstop
+set expandtab               " use spaces instead of tabs
+set smarttab                " use tabs at the start of a line, spaces elsewherei
+
+
+
+" Misc
+" ===========================================================================
+
+" Make copy operations work with the clipboard
+set clipboard=unnamed
+
+" Trim trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Disable arrow keys
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
+" Auto-create parent directories when expanding file
+" Ref: http://stackoverflow.com/a/4294176/517528
+function s:MkNonExDir(file, buf)
+    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+        let dir=fnamemodify(a:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+endfunction
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
+
+" Set leader
+let mapleader = ","
+
+" Leader mappings
+nmap <Leader>qn :cnext<CR>
+nmap <Leader>qp :cprev<CR>
+
+" CSScomb
+" ===========================================================================
+
+autocmd FileType scss,css nnoremap <buffer> <F5> :call CSScomb()<CR>
+function! CSScomb()
+  execute "silent !csscomb " . expand('%')
+  redraw!
+endfunction
+
+" Custom syntaxes
+" ===========================================================================
+
+" SWIG
+au BufRead,BufNewFile *.swig set filetype=swig
