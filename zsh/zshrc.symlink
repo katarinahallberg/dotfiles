@@ -41,7 +41,6 @@ done
 unset config_files
 
 # Display archey splash on new prompts if it is installed
-if test $(which archey)
-then
+if [[ -n $(which archey) ]]; then
   archey -c
 fi
