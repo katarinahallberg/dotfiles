@@ -97,17 +97,7 @@ compdef _git gts=git-tag
 alias gvt='git verify-tag'
 compdef _git gvt=git verify-tag
 
-#remove the gf alias
-#alias gf='git ls-files | grep'
-
-alias gpoat='git push origin --all && git push origin --tags'
-alias gmt='git mergetool --no-prompt'
-compdef _git gmt=git-mergetool
-
-alias gg='git gui citool'
-alias gga='git gui citool --amend'
-alias gk='gitk --all --branches'
-
+# Stashing
 alias gsts='git stash show --text'
 alias gsta='git stash'
 alias gstp='git stash pop'
@@ -123,40 +113,6 @@ compdef git-svn-dcommit-push=git
 
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
-#
-# Will return the current branch name
-# Usage example: git pull origin $(current_branch)
-#
-function current_branch() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
-  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
-  echo ${ref#refs/heads/}
-}
-
-function current_repository() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
-  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
-  echo $(git remote -v | cut -d':' -f 2)
-}
-
-# these aliases take advantage of the previous function
-alias ggpull='git pull origin $(current_branch)'
-compdef ggpull=git
-alias ggpur='git pull --rebase origin $(current_branch)'
-compdef ggpur=git
-alias ggpush='git push origin $(current_branch)'
-compdef ggpush=git
-alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
-compdef ggpnp=git
-
-# Pretty log messages
-function _git_log_prettily(){
-  if ! [ -z $1 ]; then
-    git log --pretty=$1
-  fi
-}
-alias glp="_git_log_prettily"
-compdef _git glp=git-log
 
 # Work In Progress (wip)
 # These features allow to pause a branch development and switch to another one (wip)
@@ -169,11 +125,12 @@ function work_in_progress() {
   fi
 }
 # these alias commit and uncomit wip branches
-alias gwip='git add -A; git ls-files --deleted -z | xargs -r0 git rm; git commit -m "--wip--"'
+alias gwip='git add -A; git ls-files --deleted -z | xargs git rm; git commit -m "--wip--"'
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 
 # these alias ignore changes to file
 alias gignore='git update-index --assume-unchanged'
 alias gunignore='git update-index --no-assume-unchanged'
+
 # list temporarily ignored files
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
