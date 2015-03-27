@@ -37,6 +37,7 @@ packages=(
   "unrar"
   "wget"
   "youtube-dl"
+  "python"
 )
 
 # Install
