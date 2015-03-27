@@ -8,10 +8,4 @@ if [ -x "$(command -v pip)" ]; then
     pip install Pygments
   fi
 
-
-  # Alias ccat if Pygments was successfully installed
-  if [ -x "$(command -v pygmentize)" ]; then
-    alias ccat="pygmentize -g"
-  fi
-
 fi
