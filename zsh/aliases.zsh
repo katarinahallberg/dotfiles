@@ -1,5 +1,5 @@
 # Some nice aliases
-alias ls="ls -G"
+alias ls="ls -GF"
 alias ll="ls -lh"
 alias la="ls -lha"
 alias c="clear"
