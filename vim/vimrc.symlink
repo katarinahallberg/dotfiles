@@ -61,6 +61,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " Open NERDTree on startup
 "autocmd vimenter * NERDTree
 
+" Open NERDTree at current buffer root
+set autochdir
+let NERDTreeChDirMode=2
+nnoremap <leader>n :NERDTree .<CR>
+
 
 
 " NEOCOMPLCACHE
