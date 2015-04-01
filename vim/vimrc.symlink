@@ -124,7 +124,6 @@ set gdefault                " have :s///g flag by default on"
 " ===========================================================================
 
 set number                  " show line numbers
-set colorcolumn=80          " ruler at 80 chars width
 set cursorline              " highlight the current line
 set history=200             " remember a lot of stuff
 set ruler                   " Always show info along bottom.
@@ -196,14 +195,6 @@ let mapleader = ","
 nmap <Leader>qn :cnext<CR>
 nmap <Leader>qp :cprev<CR>
 
-" CSScomb
-" ===========================================================================
-
-autocmd FileType scss,css nnoremap <buffer> <F5> :call CSScomb()<CR>
-function! CSScomb()
-  execute "silent !csscomb " . expand('%')
-  redraw!
-endfunction
 
 " Custom syntaxes
 " ===========================================================================
