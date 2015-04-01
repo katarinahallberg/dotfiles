@@ -131,8 +131,7 @@ set ruler                   " Always show info along bottom.
 
 " specify listchars with literal unicode in a :set command
 scriptencoding utf-8
-set listchars=tab:▸\ ,eol:¬
-set list
+set list lcs=tab:▸\ ,eol:¬,trail:·
 
 
 
