@@ -68,6 +68,8 @@ set autochdir
 let NERDTreeChDirMode=2
 nnoremap <leader>n :NERDTree .<CR>
 
+" Show invisible files in NERDTree
+let NERDTreeShowHidden=1
 
 
 " NEOCOMPLCACHE
