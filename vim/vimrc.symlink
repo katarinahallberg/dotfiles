@@ -133,9 +133,12 @@ set history=200             " remember a lot of stuff
 set ruler                   " Always show info along bottom.
 
 
-" specify listchars with literal unicode in a :set command
+" Specify listchars with literal unicode in a :set command
 scriptencoding utf-8
 set list lcs=tab:▸\ ,eol:¬,trail:·
+
+" Disable folding
+set nofoldenable
 
 
 
