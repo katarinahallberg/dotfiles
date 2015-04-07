@@ -23,6 +23,8 @@ Plug 'wavded/vim-stylus'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'motemen/git-vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
