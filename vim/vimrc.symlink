@@ -215,3 +215,15 @@ nmap <Leader>qp :cprev<CR>
 
 " SWIG
 au BufRead,BufNewFile *.swig set filetype=swig
+
+
+" CSScomb
+" ===========================================================================
+
+" Use npm installed CSScomb
+autocmd FileType scss,css,less,styl nnoremap <buffer> <F5> :call CSScomb()<CR>
+function! CSScomb()
+  execute "silent !csscomb " . expand('%')
+  redraw!
+endfunction
+
