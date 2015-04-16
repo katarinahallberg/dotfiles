@@ -9,7 +9,7 @@
 if test $(which npm)
 then
   # Install npm packages globally
-  npm install -g autoprefixer bower csscomb grunt http-server live-server nodemon nvm
+  npm install -g autoprefixer bower csscomb grunt http-server live-server nodemon nvm localtunnel
 else
   echo "Sorry! You need to install node first."
   exit 1
