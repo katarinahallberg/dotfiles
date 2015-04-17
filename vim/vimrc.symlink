@@ -23,6 +23,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'alvan/vim-closetag'
+Plug 'vim-scripts/closetag.vim'
 
 call plug#end()
 
