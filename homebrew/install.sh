@@ -31,13 +31,13 @@ packages=(
   "nginx"
   "node"
   "php54"
+  "python"
   "ruby-completion"
   "tmux"
   "tree"
   "unrar"
   "wget"
   "youtube-dl"
-  "python"
 )
 
 # Install
