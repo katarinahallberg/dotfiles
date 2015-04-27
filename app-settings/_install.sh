@@ -3,15 +3,17 @@
 # Synchronize selected settings from ~/Library/Preferences
 #
 
+app_settings="$HOME/.dotfiles/app-settings"
+
 src="$HOME/Library/Preferences"
-dest="."
+dest="${app_settings}"
 
 params=(
-  --include='*/'
+  --include="*/"
   # Include files listed here
-  --include-from='includes.conf'
+  --include-from="${app_settings}/includes.conf"
   # Exclude the rest
-  --exclude='*'
+  --exclude="*"
 )
 
 rsync -avm "${params[@]}" "$src"/* "$dest"
