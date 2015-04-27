@@ -7,7 +7,7 @@
 if test $(which npm)
 then
   # Install npm packages globally
-  npm install $(IFS=" "; echo "${packages[*]}")
+  npm install -g $(IFS=" "; echo "${packages[*]}")
 else
   echo "Sorry! You need to install node first."
   exit 1
