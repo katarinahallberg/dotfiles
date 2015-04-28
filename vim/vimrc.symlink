@@ -23,7 +23,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-scripts/closetag.vim'
 Plug 'wavded/vim-stylus'
 
 call plug#end()
@@ -34,7 +33,6 @@ call plug#end()
 
 " Gruvbox
 " ---------------------------------------------------------------------------
-
 if !has("gui_running")
    let g:gruvbox_italic=0
 endif
