@@ -210,13 +210,6 @@ nmap <Leader>qn :cnext<CR>
 nmap <Leader>qp :cprev<CR>
 
 
-" Custom syntaxes
-" ===========================================================================
-
-" SWIG
-au BufRead,BufNewFile *.swig set filetype=swig
-
-
 " CSScomb
 " ===========================================================================
 
