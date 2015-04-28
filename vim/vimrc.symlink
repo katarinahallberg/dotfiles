@@ -48,6 +48,11 @@ set background=dark
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 
+" Closetag
+" ---------------------------------------------------------------------------
+let g:closetag_filenames = "*.html,*.swig,*.tpl"
+
+
 " NERDTree
 " ---------------------------------------------------------------------------
 
@@ -56,9 +61,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Close vim if NERDTree is last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" Open NERDTree on startup
-"autocmd vimenter * NERDTree
 
 " Open NERDTree at current buffer root
 set autochdir
