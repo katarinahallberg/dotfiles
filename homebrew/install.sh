@@ -23,6 +23,7 @@ packages=(
   "archey"
   "bash-completion"
   "coreutils"
+  "editorconfig"
   "gem-completion"
   "git"
   "grc"
