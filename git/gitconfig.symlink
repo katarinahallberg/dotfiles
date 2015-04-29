@@ -25,6 +25,7 @@
   editor = vim
   excludesfile = ~/.gitignore
   quotepath = false
+  autocrlf = input
 [branch]
   autosetupmerge = true
 [mergetool]
