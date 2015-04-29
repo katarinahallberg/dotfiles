@@ -109,6 +109,12 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 let delimitMate_expand_cr = 1
 
 
+" Editorconfig
+" ---------------------------------------------------------------------------
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
+
+
 " GitGutter
 " ---------------------------------------------------------------------------
 let g:gitgutter_sign_removed_first_line = "^_"
