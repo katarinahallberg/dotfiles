@@ -4,7 +4,7 @@
 #
 
 # Packages to install
-Packages=(
+PACKAGES=(
   "autoprefixer"
   "bower"
   "csscomb"
@@ -20,7 +20,7 @@ Packages=(
 if test $(which npm)
 then
   # Install npm packages globally
-  npm install -g $(IFS=" "; echo "${packages[*]}")
+  npm install -g $(IFS=" "; echo "${PACKAGES[@]}")
 else
   echo "Sorry! You need to install node first."
   exit 1
