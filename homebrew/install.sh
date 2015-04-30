@@ -3,7 +3,7 @@
 ## Configuration
 
 # Taps to… tap before installing
-taps=(
+TAPS=(
   "homebrew/completions"
   "homebrew/dupes"
   "homebrew/php"
@@ -11,7 +11,7 @@ taps=(
 )
 
 # Packages to install
-packages=(
+PACKAGES=(
   "archey"
   "bash-completion"
   "coreutils"
@@ -40,10 +40,20 @@ then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Tap it!
-brew tap $(IFS=" "; echo "${taps[*]}")
+# Tap the taps (unless we already have them tapped)
+echo "Checking for any taps to tap..."
+for TAP in ${TAPS[@]} ; do
+  if ! brew tap | grep -q "^${TAPS}\$"; then
+    brew tap $TAP
+  fi
+done
 
-# Install
-brew install $(IFS=" "; echo "${packages[*]}")
+# Install if packages are not already installed
+echo "Checking for packages to install..."
+for PACKAGE in ${PACKAGES[@]} ; do
+  if ! brew list -1 | grep -q "^${PACKAGE}\$"; then
+    brew install $PACKAGE
+  fi
+done
 
 exit 0
