@@ -26,6 +26,7 @@ PACKAGES=(
   "php54"
   "python"
   "ruby-completion"
+  "tidy-html5"
   "tmux"
   "tree"
   "unrar"
