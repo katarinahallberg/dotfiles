@@ -1,5 +1,7 @@
 #!/bin/sh
+plist="$HOME/Library/LaunchAgents/homebrew.mxcl.php54.plist"
+
 echo "Reloading php-fpm..."
-launchctl stop homebrew-php.josegonzalez.php54
+launchctl unload $plist
 sleep 0.5
-launchctl load ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+launchctl load $plist
