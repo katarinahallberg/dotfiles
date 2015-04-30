@@ -5,7 +5,7 @@ alias ll="ls -lh"
 alias la="ls -lha"
 alias c="clear"
 alias x="exit"
-alias df="gdf -h"
+alias df="gdf -H"
 alias grep="grep --color"
 
 # Clean up "Open with…" menu
