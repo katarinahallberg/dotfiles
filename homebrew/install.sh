@@ -1,11 +1,6 @@
 #!/bin/sh
 
-# Check for Homebrew
-if test ! $(which brew)
-then
-  echo "  Installing Homebrew for you."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+## Configuration
 
 # Taps to… tap before installing
 taps=(
@@ -14,9 +9,6 @@ taps=(
   "homebrew/php"
   "homebrew/versions"
 )
-
-# Tap it!
-brew tap $(IFS=" "; echo "${taps[*]}")
 
 # Packages to install
 packages=(
@@ -40,6 +32,16 @@ packages=(
   "wget"
   "youtube-dl"
 )
+
+# Check for Homebrew
+if test ! $(which brew)
+then
+  echo "  Installing Homebrew for you."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Tap it!
+brew tap $(IFS=" "; echo "${taps[*]}")
 
 # Install
 brew install $(IFS=" "; echo "${packages[*]}")
