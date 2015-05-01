@@ -36,7 +36,7 @@ PACKAGES=(
   "youtube-dl"
 )
 
-# Check for Homebrew
+# Check if we're on Darwin, the check for Homebrew
 if uname | grep -q "Darwin" ; then
   if test ! $(which brew) ; then
     echo "  Installing Homebrew for you."
