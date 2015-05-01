@@ -1,8 +1,10 @@
-#!/bin/sh
+#!/usr/bin/env bash
+#
+# Setup required taps and install Homebrew packages
 
-## Configuration
+set -e
 
-# Taps to… tap before installing
+# Set up taps before installing
 TAPS=(
   "homebrew/completions"
   "homebrew/dupes"

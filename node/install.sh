@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # Node package manager (NPM)
-#
+
+set -e
 
 # Packages to install
 PACKAGES=(
