@@ -17,13 +17,13 @@ PACKAGES=(
 )
 
 # Check for npm
-if test $(which npm)
-then
+if test $(which npm) ; then
   # Install npm packages globally
-  npm install -g $(IFS=" "; echo "${PACKAGES[@]}")
-else
-  echo "Sorry! You need to install node first."
-  exit 1
+  for PACKAGE in ${PACKAGES[@]} ; do
+    if ! npm -g list | grep -q "${PACKAGE}" ; then
+      npm install -g $PACKAGE
+    fi
+  done
 fi
 
 exit 0
