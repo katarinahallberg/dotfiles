@@ -47,16 +47,6 @@ if which tmux &> /dev/null
     export ZSH_TMUX_TERM=$ZSH_TMUX_FIXTERM_WITHOUT_256COLOR
   fi
 
-  # Set the correct local config file to use.
-    if [[ "$ZSH_TMUX_ITERM2" == "false" ]] && [[ -f $HOME/.tmux.conf || -h $HOME/.tmux.conf ]]
-  then
-    #use this when they have a ~/.tmux.conf
-    export _ZSH_TMUX_FIXED_CONFIG="$zsh_tmux_plugin_path/tmux.extra.conf"
-  else
-    #use this when they don't have a ~/.tmux.conf
-    export _ZSH_TMUX_FIXED_CONFIG="$zsh_tmux_plugin_path/tmux.only.conf"
-  fi
-
   # Wrapper function for tmux.
   function _zsh_tmux_plugin_run()
   {
