@@ -1,6 +1,6 @@
 # Darwin only aliases
 #
-if uname | grep -q "Darwin" ; then
+if [ "$(uname -s)" == "Darwin" ] ; then
 
   # System utils
   alias ls='ls -GF'
@@ -14,7 +14,7 @@ fi
 
 # Linux only aliases
 #
-if uname | grep -q "Linux" ; then
+if [ "$(uname -s)" == "Linux" ] ; then
 
   # System utils
   alias ls='ls --color -F'
