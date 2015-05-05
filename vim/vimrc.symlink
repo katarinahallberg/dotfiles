@@ -138,6 +138,9 @@ set ignorecase              " make searches case-insensitive...
 set smartcase               " ... unless they contain at least one capital letter
 set gdefault                " have :s///g flag by default on"
 
+" Remove search highlight
+map <C-h> :noh<CR>
+
 
 
 " Visual Stuff
