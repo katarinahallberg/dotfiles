@@ -26,7 +26,6 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/greplace.vim'
-Plug 'vim-scripts/tasklist.vim'
 Plug 'wavded/vim-stylus'
 
 call plug#end()
