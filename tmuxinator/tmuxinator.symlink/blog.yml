@@ -1,0 +1,9 @@
+name: blog
+root: ~/Sites/blog/
+
+windows:
+  - blog:
+      layout: main-vertical
+      panes:
+        - git st
+        - jekyll serve --drafts
