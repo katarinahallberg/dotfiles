@@ -230,7 +230,7 @@ nmap <Leader>qp :cprev<CR>
 " ===========================================================================
 
 " Use npm installed CSScomb
-autocmd FileType scss,css,less,styl nnoremap <buffer> <F5> :call CSScomb()<CR>
+autocmd FileType scss,css,less,styl nnoremap <buffer> <Leader>c :call CSScomb()<CR>
 function! CSScomb()
   execute "silent !csscomb " . expand('%')
   redraw!
