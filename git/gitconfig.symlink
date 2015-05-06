@@ -33,6 +33,9 @@
 [branch "master"]
   rebase = true
   mergeoptions = --no-ff
+[branch "develop"]
+  rebase = true
+  mergeoptions = --no-ff
 [alias]
   br = branch
   ci = commit
