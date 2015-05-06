@@ -1,0 +1,9 @@
+name: blog
+root: ~/Sites/nwp2/
+
+windows:
+  - blog:
+      layout: main-vertical
+      panes:
+        - git st
+        - npm run dev
