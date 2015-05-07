@@ -1,11 +1,11 @@
 # Darwin only aliases
 #
-if [ "$(uname -s)" == "Darwin" ] ; then
+if [[ '$(uname -s)' == 'Darwin' ]] ; then
 
   # System utils
   alias ls='ls -GF'
   alias l='ls -GF'
-  alias df="gdf -H"
+  alias df='gdf -H'
 
   # Clean up 'Open with…' menu
   alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
@@ -14,7 +14,7 @@ fi
 
 # Linux only aliases
 #
-if [ "$(uname -s)" == "Linux" ] ; then
+if [[ '$(uname -s)' == 'Linux' ]] ; then
 
   # System utils
   alias ls='ls --color -F'
