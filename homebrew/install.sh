@@ -37,7 +37,7 @@ PACKAGES=(
 )
 
 # Check if we're on Darwin, the check for Homebrew
-if [ "$(uname -s)" == "Darwin" ] ; then
+if [[ "$(uname -s)" == "Darwin" ]] ; then
   if test ! $(which brew) ; then
     echo "  Installing Homebrew for you."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
