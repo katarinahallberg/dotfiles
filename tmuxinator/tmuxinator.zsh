@@ -1,6 +1,6 @@
 #compdef tmuxinator mux
 
-if test $(which tmuxinator) ; then
+if $(command -v tmuxinator) ; then
 
   _tmuxinator() {
     local commands projects
