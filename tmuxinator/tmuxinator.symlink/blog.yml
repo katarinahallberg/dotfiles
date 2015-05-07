@@ -5,5 +5,5 @@ windows:
   - blog:
       layout: main-vertical
       panes:
-        - git st
-        - jekyll serve --drafts
+        - c
+        - c && jekyll serve --drafts

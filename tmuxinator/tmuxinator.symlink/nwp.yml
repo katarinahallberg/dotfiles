@@ -5,5 +5,5 @@ windows:
   - blog:
       layout: main-vertical
       panes:
-        - git st
-        - npm run dev
+        -
+        - c && npm run dev
