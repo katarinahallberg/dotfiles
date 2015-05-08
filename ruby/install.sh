@@ -2,6 +2,10 @@
 #
 # Setup rebenv and install some nice gems globally
 
+set -e
+
+RUBY_VERSION="2.2.2"
+
 GEMS=(
   "bundler"
   "jekyll"
@@ -22,7 +26,10 @@ then
 fi
 
 # Check for rbenv before attempting to install gems
-if $(command -v rbenv) ; then
+if $(command -v rbenv >/dev/null 2>&1) ; then
+  echo 'Installing Ruby for you.'
+  rbenv install ${RUBY_VERSION}
+  rbenv global ${RUBY_VERSION}
   echo "Checking for gems to install"
   for GEM in ${GEMS[@]} ; do
     if ! gem list | grep -q "${GEM}" ; then
