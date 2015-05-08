@@ -15,7 +15,6 @@ TAPS=(
 # Packages to install
 PACKAGES=(
   "archey"
-  "bash-completion"
   "coreutils"
   "editorconfig"
   "gem-completion"
