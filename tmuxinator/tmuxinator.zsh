@@ -1,6 +1,6 @@
 #compdef tmuxinator mux
 
-if $(command -v tmuxinator) ; then
+if $(command -v tmuxinator >/dev/null 2>&1) ; then
 
   _tmuxinator() {
     local commands projects
