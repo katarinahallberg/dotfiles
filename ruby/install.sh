@@ -25,9 +25,11 @@ fi
 
 # Check for rbenv before attempting to install gems
 if $(command -v rbenv >/dev/null 2>&1) ; then
-  echo 'Installing Ruby for you.'
-  rbenv install ${RUBY_VERSION}
-  rbenv global ${RUBY_VERSION}
+  if ! [[ $(rbenv global) == ${RUBY_VERSION} ]] ; then
+    echo 'Installing Ruby for you.'
+    rbenv install ${RUBY_VERSION}
+    rbenv global ${RUBY_VERSION}
+  fi
   gem update --system
   echo "Checking for gems to install"
   for GEM in ${GEMS[@]} ; do
