@@ -1,0 +1,8 @@
+name: readjust
+root: ~/Sites/readjust/
+
+windows:
+  - readjust:
+      layout: main-vertical
+      panes:
+        - c
