@@ -4,15 +4,19 @@ I don't think it's a good idea for you to fork this. I'm very special. 😉
 
 ## Usage
 
-```zsh
-$ script/bootstrap
-```
-
-Not running zsh?
+Make sure you're running `zsh` first, since most of my dotfiles assumes this.
 
 ```zsh
 $ chsh -s /bin/zsh
 ```
+
+We're ready to bootstrap!
+
+```zsh
+$ script/bootstrap
+```
+
+All done!
 
 ## Thanks
 
