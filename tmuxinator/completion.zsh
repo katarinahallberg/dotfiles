@@ -13,7 +13,7 @@ if $(command -v tmuxinator >/dev/null 2>&1) ; then
     elif (( CURRENT == 3)); then
       case $words[2] in
         copy|debug|delete|open|start)
-          _arguments '*:projects:($projects)'
+          _arguments "*:projects:($projects)"
         ;;
       esac
     fi
