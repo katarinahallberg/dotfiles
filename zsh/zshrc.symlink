@@ -9,10 +9,6 @@ then
   source ~/.localrc
 fi
 
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
-
 # all of our zsh files
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
@@ -46,3 +42,7 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
   eval $(ssh-agent -s)
   ssh-add
 fi
+
+# Autocomplete
+autoload -U compinit
+compinit
