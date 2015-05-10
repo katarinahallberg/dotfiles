@@ -44,7 +44,6 @@ alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
 alias gclean='git reset --hard && git clean -dfx'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
-alias gsps='git show --pretty=short --show-signature'
 alias gvt='git verify-tag'
 
 # Stashing
