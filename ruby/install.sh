@@ -21,8 +21,10 @@ fi
 
 if ! $(command -v ruby-build >/dev/null 2>&1) ; then
   echo '  Installing ruby-build and rbenv-gem-rehash for you.'
-  brew install ruby-build > /tmp/ruby-build-install.log
-  brew install rbenv-gem-rehash > /tmp/rbenv-gem-rehash-install.log
+  if [[ "$(uname -s)" == "Darwin" ]] ; then
+    brew install ruby-build > /tmp/ruby-build-install.log
+    brew install rbenv-gem-rehash > /tmp/rbenv-gem-rehash-install.log
+  fi
 fi
 
 # Check for rbenv before attempting to install gems
