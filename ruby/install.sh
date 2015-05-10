@@ -16,7 +16,7 @@ if ! $(command -v rbenv >/dev/null 2>&1) ; then
   echo '  Installing rbenv for you.'
   if [[ "$(uname -s)" == "Darwin" ]] ; then
     brew install rbenv > /tmp/rbenv-install.log
-  elif [[ "$(uname -s)" == "Linux" ]]
+  elif [[ "$(uname -s)" == "Linux" ]] ; then
     sudo aptitude install rbenv
   fi
 fi
