@@ -12,12 +12,12 @@ GEMS=(
   "tmuxinator"
 )
 
-if test ! $(which rbenv) ; then
+if ! $(command -v rbenv >/dev/null 2>&1) ; then
   echo "  Installing rbenv for you."
   brew install rbenv > /tmp/rbenv-install.log
 fi
 
-if test ! $(which ruby-build) ; then
+if ! $(command -v ruby-build >/dev/null 2>&1) ; then
   echo "  Installing ruby-build and rbenv-gem-rehash for you."
   brew install ruby-build > /tmp/ruby-build-install.log
   brew install rbenv-gem-rehash > /tmp/rbenv-gem-rehash-install.log
