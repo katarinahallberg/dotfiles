@@ -14,7 +14,9 @@ GEMS=(
 
 if ! $(command -v rbenv >/dev/null 2>&1) ; then
   echo '  Installing rbenv for you.'
-  brew install rbenv > /tmp/rbenv-install.log
+  if [[ "$(uname -s)" == "Darwin" ]] ; then
+    brew install rbenv > /tmp/rbenv-install.log
+  fi
 fi
 
 if ! $(command -v ruby-build >/dev/null 2>&1) ; then
