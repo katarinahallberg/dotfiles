@@ -25,6 +25,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/nginx.vim'
 Plug 'wavded/vim-stylus'
 Plug 'yegappan/greplace'
 
