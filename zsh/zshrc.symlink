@@ -25,6 +25,10 @@ do
   source $file
 done
 
+# Autocomplete
+autoload -U compinit
+compinit
+
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
@@ -42,7 +46,3 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
   eval $(ssh-agent -s)
   ssh-add
 fi
-
-# Autocomplete
-autoload -U compinit
-compinit
