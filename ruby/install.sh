@@ -39,8 +39,8 @@ if $(command -v rbenv >/dev/null 2>&1) ; then
     rbenv install ${RUBY_VERSION}
     rbenv global ${RUBY_VERSION}
   fi
-  echo "  Reloading the shell..."
-  exec $(source $HOME/.zshrc >/dev/null 2>&1)
+  echo "  Updating your environment."
+  eval "$(rbenv init -)"
   gem update --system
   echo "  Checking for gems to install."
   for GEM in ${GEMS[@]} ; do
