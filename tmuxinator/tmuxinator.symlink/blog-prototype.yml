@@ -1,0 +1,9 @@
+name: blog-prototype
+root: ~/Sites/blog-prototype/
+
+windows:
+  - blog-prototype:
+      layout: main-vertical
+      panes:
+        - c
+        - c && hs -p 4004
