@@ -1,20 +1,22 @@
 #!/usr/bin/env bash
 #
-# Setup rebenv and install some nice gems globally
+# Setup rbenv and install some nice gems globally
 
 set -e
 
-echo ""
-echo "Running Ruby install script"
-echo ""
-
+# Version to install with rbenv
 RUBY_VERSION="2.2.2"
 
+# Gems to install
 GEMS=(
   "bundler"
   "jekyll"
   "tmuxinator"
 )
+
+echo ""
+echo "Running Ruby install script"
+echo ""
 
 if ! $(command -v rbenv >/dev/null 2>&1) ; then
   echo "  Installing rbenv for you."

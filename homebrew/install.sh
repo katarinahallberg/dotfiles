@@ -4,10 +4,6 @@
 
 set -e
 
-echo ""
-echo "Running Homebrew install script"
-echo ""
-
 # Set up taps before installing
 TAPS=(
   "homebrew/completions"
@@ -41,6 +37,10 @@ PACKAGES=(
   "wget"
   "youtube-dl"
 )
+
+echo ""
+echo "Running Homebrew install script"
+echo ""
 
 # Check if we're on Darwin, then check for Homebrew
 if [[ "$(uname -s)" == "Darwin" ]] ; then

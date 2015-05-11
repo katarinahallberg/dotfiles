@@ -4,10 +4,6 @@
 
 set -e
 
-echo ""
-echo "Running Node install script"
-echo ""
-
 # Packages to install
 PACKAGES=(
   "autoprefixer"
@@ -20,6 +16,10 @@ PACKAGES=(
   "nvm"
   "localtunnel"
 )
+
+echo ""
+echo "Running Node install script"
+echo ""
 
 # Check for npm
 if test $(which npm) ; then
