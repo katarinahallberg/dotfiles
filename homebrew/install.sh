@@ -4,6 +4,10 @@
 
 set -e
 
+echo ""
+echo "Running Homebrew install script"
+echo ""
+
 # Set up taps before installing
 TAPS=(
   "homebrew/completions"
