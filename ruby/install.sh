@@ -40,7 +40,7 @@ if $(command -v rbenv >/dev/null 2>&1) ; then
     rbenv global ${RUBY_VERSION}
   fi
   echo "  Reloading the shell..."
-  exec $SHELL -l
+  exec $(source $HOME/.zshrc >/dev/null 2>&1)
   gem update --system
   echo "  Checking for gems to install."
   for GEM in ${GEMS[@]} ; do
