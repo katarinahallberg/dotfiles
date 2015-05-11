@@ -48,7 +48,7 @@ fi
 
 # Set up taps
 if test $(which brew) ; then
-  echo "Checking for anything to tap..."
+  echo "  Checking for anything to tap..."
   for TAP in ${TAPS[@]} ; do
     if ! brew tap | grep -q "^${TAP}\$" ; then
       brew tap $TAP
@@ -58,7 +58,7 @@ fi
 
 # Install packages
 if test $(which brew) ; then
-  echo "Checking for packages to install..."
+  echo "  Checking for packages to install..."
   for PACKAGE in ${PACKAGES[@]} ; do
     if ! brew list -1 | grep -q "^${PACKAGE}\$" ; then
       brew install $PACKAGE
