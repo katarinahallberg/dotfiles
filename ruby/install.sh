@@ -34,6 +34,8 @@ if $(command -v rbenv >/dev/null 2>&1) ; then
     echo " Installing Ruby for you."
     rbenv install ${RUBY_VERSION}
     rbenv global ${RUBY_VERSION}
+    echo "  Reloading the shell..."
+    exec $SHELL -l
   fi
   gem update --system
   echo "  Checking for gems to install."
