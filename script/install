@@ -8,3 +8,6 @@ cd "$(dirname $0)"/..
 
 # find the installers and run them iteratively
 find . -maxdepth 2 -name install.sh | while read installer ; do sh -c "${installer}" ; done
+
+# reload the shell environment so that we can run script/install directly afterwards
+exec $SHELL -l
