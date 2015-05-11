@@ -35,9 +35,9 @@ if $(command -v rbenv >/dev/null 2>&1) ; then
     rbenv install ${RUBY_VERSION}
     rbenv global ${RUBY_VERSION}
     echo "  Reloading the shell..."
-    exec $SHELL -l
-    gem update --system
   fi
+  exec $SHELL -l
+  gem update --system
   echo "  Checking for gems to install."
   for GEM in ${GEMS[@]} ; do
     if ! gem list | grep -q "${GEM}" ; then
