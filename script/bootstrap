@@ -117,11 +117,11 @@ link_file () {
 }
 
 install_dotfiles () {
-  info 'installing dotfiles'
+  info "installing dotfiles"
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find "$DOTFILES_ROOT/" -maxdepth 2 -name '*.symlink')
+  for src in $(find "$DOTFILES_ROOT/" -maxdepth 2 -name "*.symlink")
   do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
@@ -142,8 +142,10 @@ install_dotfiles
 #   fi
 # fi
 
-echo ''
-echo '  All installed!'
+echo ""
+echo "  All installed!"
 
 # reload the shell environment so that we can run script/install directly afterwards
+echo ""
+echo "  Reloading the shell environment."
 exec $SHELL -l
