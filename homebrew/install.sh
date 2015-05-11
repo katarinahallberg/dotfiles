@@ -38,7 +38,7 @@ PACKAGES=(
   "youtube-dl"
 )
 
-# Check if we're on Darwin, the check for Homebrew
+# Check if we're on Darwin, then check for Homebrew
 if [[ "$(uname -s)" == "Darwin" ]] ; then
   if test ! $(which brew) ; then
     echo "  Installing Homebrew for you."
@@ -46,7 +46,7 @@ if [[ "$(uname -s)" == "Darwin" ]] ; then
   fi
 fi
 
-# Tap the taps (unless we already have them tapped)
+# Set up taps
 if test $(which brew) ; then
   echo "Checking for anything to tap..."
   for TAP in ${TAPS[@]} ; do
@@ -56,7 +56,7 @@ if test $(which brew) ; then
   done
 fi
 
-# Install if packages are not already installed
+# Install packages
 if test $(which brew) ; then
   echo "Checking for packages to install..."
   for PACKAGE in ${PACKAGES[@]} ; do
