@@ -16,6 +16,12 @@ We're ready to bootstrap!
 $ script/bootstrap
 ```
 
+Run the install script afterwards.
+
+```zsh
+$ script/install
+```
+
 All done!
 
 ## Thanks
