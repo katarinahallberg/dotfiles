@@ -50,7 +50,7 @@ fi
 if test $(which brew) ; then
   echo "Checking for anything to tap..."
   for TAP in ${TAPS[@]} ; do
-    if ! brew tap | grep -q "^${TAPS}\$" ; then
+    if ! brew tap | grep -q "^${TAP}\$" ; then
       brew tap $TAP
     fi
   done
