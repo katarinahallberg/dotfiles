@@ -4,6 +4,10 @@
 
 set -e
 
+echo ""
+echo "Running Ruby install script"
+echo ""
+
 RUBY_VERSION="2.2.2"
 
 GEMS=(
