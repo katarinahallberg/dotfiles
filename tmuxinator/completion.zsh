@@ -1,30 +1,25 @@
-#compdef tmuxinator mux
+#!/usr/bin/env bash
+
+if [[ -n ${ZSH_VERSION-} ]]; then
+  autoload -U +X bashcompinit && bashcompinit
+fi
 
 _tmuxinator() {
-  local commands projects
-  commands=(${(f)"$(tmuxinator commands zsh)"})
-  projects=(${(f)"$(tmuxinator completions start)"})
+    COMPREPLY=()
+    local word="${COMP_WORDS[COMP_CWORD]}"
 
-  if (( CURRENT == 2 )); then
-    _describe -t commands "tmuxinator subcommands" commands
-    _describe -t projects "tmuxinator projects" projects
-  elif (( CURRENT == 3)); then
-    case $words[2] in
-      copy|debug|delete|open|start)
-        _arguments "*:projects:($projects)"
-      ;;
-    esac
-  fi
+    if [ "$COMP_CWORD" -eq 1 ]; then
+        local commands="$(compgen -W "$(tmuxinator commands)" -- "$word")"
+        local projects="$(compgen -W "$(tmuxinator completions start)" -- "$word")"
 
-  return
+        COMPREPLY=( $commands $projects )
+    else
+        local words=("${COMP_WORDS[@]}")
+        unset words[0]
+        unset words[$COMP_CWORD]
+        local completions=$(tmuxinator completions "${words[@]}")
+        COMPREPLY=( $(compgen -W "$completions" -- "$word") )
+    fi
 }
 
-_tmuxinator
-
-# Local Variables:
-# mode: Shell-Script
-# sh-indentation: 2
-# indent-tabs-mode: nil
-# sh-basic-offset: 2
-# End:
-# vim: ft=zsh sw=2 ts=2 et
+complete -F _tmuxinator tmuxinator mux
