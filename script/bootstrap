@@ -144,3 +144,6 @@ install_dotfiles
 
 echo ''
 echo '  All installed!'
+
+# reload the shell environment so that we can run script/install directly afterwards
+exec $SHELL -l
