@@ -38,9 +38,9 @@ done
 unset config_files
 
 # Display archey splash on new prompts if it is installed
-if [ -x "$(command -v archey)" ]; then
-  archey -c
-fi
+# if [ -x "$(command -v archey)" ]; then
+#   archey -c
+# fi
 
 if [ -z "$SSH_AUTH_SOCK" ] ; then
   eval $(ssh-agent -s)
