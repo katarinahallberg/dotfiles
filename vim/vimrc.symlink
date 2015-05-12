@@ -45,6 +45,17 @@ colorscheme gruvbox
 set background=dark
 
 
+" CSScomb
+" ---------------------------------------------------------------------------
+
+" Use npm installed CSScomb
+autocmd FileType scss,css,less,styl nnoremap <buffer> <Leader>c :call CSScomb()<CR>
+function! CSScomb()
+  execute "silent !csscomb " . expand('%')
+  redraw!
+endfunction
+
+
 " CtrlP
 " ---------------------------------------------------------------------------
 
@@ -225,15 +236,3 @@ let mapleader = ","
 " Leader mappings
 nmap <Leader>qn :cnext<CR>
 nmap <Leader>qp :cprev<CR>
-
-
-" CSScomb
-" ===========================================================================
-
-" Use npm installed CSScomb
-autocmd FileType scss,css,less,styl nnoremap <buffer> <Leader>c :call CSScomb()<CR>
-function! CSScomb()
-  execute "silent !csscomb " . expand('%')
-  redraw!
-endfunction
-
