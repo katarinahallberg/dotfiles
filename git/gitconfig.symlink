@@ -37,4 +37,4 @@
   rebase = true
   mergeoptions = --no-ff
 [push]
-  default = matching
+  default = current
