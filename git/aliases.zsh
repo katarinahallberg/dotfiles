@@ -63,7 +63,7 @@ alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
 # This function return a warning if the current branch is a wip
 function work_in_progress() {
   if $(git log -n 1 2>/dev/null | grep -q -c "\-\-wip\-\-"); then
-    echo "WIP!!"
+    echo "WIP!"
   fi
 }
 # these alias commit and uncomit wip branches
