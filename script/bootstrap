@@ -133,8 +133,3 @@ install_dotfiles
 
 echo ""
 echo "  All installed!"
-
-# reload the shell environment so that we can run script/install directly afterwards
-echo ""
-echo "  Reloading the shell environment."
-source ~/.zshrc
