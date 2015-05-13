@@ -28,6 +28,7 @@ PACKAGES=(
   "python"
   "rbenv"
   "rbenv-gem-rehash"
+  "rbenv-gemset"
   "ruby-build"
   "ruby-completion"
   "tidy-html5"
