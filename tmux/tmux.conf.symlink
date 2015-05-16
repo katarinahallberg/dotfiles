@@ -3,6 +3,9 @@ set-window-option -g utf8 on
 
 set -g default-terminal "screen-256color"
 
+# Reset base index to 1
+set -g base-index
+
 # Scrollback history limit
 set -g history-limit 10000
 
