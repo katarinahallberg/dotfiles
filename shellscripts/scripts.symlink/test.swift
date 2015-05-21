@@ -1,3 +1,6 @@
-#!/usr/bin/swift
+#!/usr/bin/env xcrun swift
 
-println("Much swift. Such amaze.")
+println("Process.arguments gave args:")
+for s in Process.arguments {
+  println(s)
+}
