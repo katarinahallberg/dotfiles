@@ -1,39 +1,62 @@
+# Git aliases
+#
+
 alias g='git'
+
+# Add
 alias ga='git add'
 alias gaa='git add --all'
 alias gap='git add --patch'
 alias gb='git branch'
+
+# Branch
 alias gba='git branch -a'
 alias gbr='git branch --remote'
 alias gc!='git commit -v --amend'
+
+# Commit
 alias gc='git commit -v'
 alias gca!='git commit -v -a --amend'
 alias gca='git commit -v -a'
-alias gcl='git config --list'
-alias gclean='git reset --hard && git clean -dfx'
-alias gcm='git checkout master'
 alias gcmsg='git commit -m'
-alias gco='git checkout'
-alias gcount='git shortlog -sn'
-alias gcp='git cherry-pick'
+
+# Rebase
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias grbi='git rebase -i'
+
+# Diff
 alias gd='git diff'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdt='git difftool'
-alias gf='git fetch'
-alias gl='git pull'
+
+# Stashing
+alias gsta='git stash'
+alias gstd='git stash drop'
+alias gstp='git stash pop'
+alias gsts='git stash show --text'
+
+# Log
 alias glg='git log --stat --max-count=10'
 alias glgg='git log --graph --max-count=10'
 alias glgga='git log --graph --decorate --all'
 alias glo='git log --oneline --decorate --color'
 alias glog='git log --oneline --decorate --color --graph'
+
+# Other (unsorted)
+alias gcl='git config --list'
+alias gclean='git reset --hard && git clean -dfx'
+alias gcm='git checkout master'
+alias gco='git checkout'
+alias gcount='git shortlog -sn'
+alias gcp='git cherry-pick'
+alias gf='git fetch'
+alias gl='git pull'
 alias gm='git merge'
 alias gp='git push'
 alias gr='git remote'
-alias grba='git rebase --abort'
-alias grbc='git rebase --continue'
-alias grbi='git rebase -i'
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
 alias grmv='git remote rename'
@@ -45,12 +68,6 @@ alias gss='git status -s'
 alias gst='git status'
 alias gvt='git verify-tag'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
-
-# Stashing
-alias gsta='git stash'
-alias gstd='git stash drop'
-alias gstp='git stash pop'
-alias gsts='git stash show --text'
 
 # Will cd into the top of the current repository
 # or submodule.
