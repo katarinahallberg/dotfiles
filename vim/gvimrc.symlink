@@ -8,4 +8,3 @@ set guioptions-=e  " use text-mode tab bar
 
 " Font settings:
 set guifont=Menlo:h14
-
