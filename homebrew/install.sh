@@ -41,7 +41,7 @@ PACKAGES=(
 )
 
 echo ""
-echo "Running Homebrew install script"
+echo "  Running Homebrew install script"
 echo ""
 
 # Check if we're on Darwin, then check for Homebrew
