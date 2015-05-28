@@ -35,6 +35,7 @@ PACKAGES=(
   "tmux"
   "tree"
   "unrar"
+  "vim"
   "wget"
   "youtube-dl"
 )
