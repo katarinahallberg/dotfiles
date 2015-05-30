@@ -30,7 +30,7 @@ if test $(which npm) ; then
     if ! npm -g list | grep -q "${PACKAGE}" ; then
       npm install -g $PACKAGE
     else
-      echo "    * Found ${PACKAGE}"
+      echo "    * ${PACKAGE} already installed."
     fi
   done
 fi
