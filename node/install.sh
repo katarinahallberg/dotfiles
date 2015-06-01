@@ -19,7 +19,6 @@ PACKAGES=(
 
 echo ""
 echo "  Running Node install script"
-echo ""
 
 # Check for npm
 if test $(which npm) ; then
