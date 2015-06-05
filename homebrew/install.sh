@@ -21,6 +21,7 @@ PACKAGES=(
   "git"
   "grc"
   "htop-osx"
+  "imagemagick"
   "mysql"
   "nginx"
   "node"
