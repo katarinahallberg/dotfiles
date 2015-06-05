@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
-Plug 'brettof86/vim-swigjs'
+Plug 'brettof86/vim-swigjs', { 'for': 'swig' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'godlygeek/tabular'
 Plug 'groenewege/vim-less'
