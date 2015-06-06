@@ -3,19 +3,17 @@
 
 call plug#begin('~/.vim/plugged')
 
+" Regular plugins
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
-Plug 'brettof86/vim-swigjs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'godlygeek/tabular'
 Plug 'groenewege/vim-less'
-Plug 'hail2u/vim-css3-syntax'
 Plug 'kien/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 Plug 'morhetz/gruvbox'
 Plug 'nelstrom/vim-markdown-preview'
 Plug 'nelstrom/vim-qargs'
-Plug 'plasticboy/vim-markdown'
 Plug 'raimondi/delimitMate'
 Plug 'scrooloose/nerdtree'
 Plug 'shougo/neocomplcache.vim'
@@ -25,9 +23,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'yegappan/greplace'
+
+" Syntax plugins
+Plug 'brettof86/vim-swigjs'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/nginx.vim'
 Plug 'wavded/vim-stylus'
-Plug 'yegappan/greplace'
 
 call plug#end()
 
