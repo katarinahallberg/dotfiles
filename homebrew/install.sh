@@ -22,6 +22,7 @@ PACKAGES=(
   "grc"
   "htop-osx"
   "imagemagick"
+  "macvim"
   "mysql"
   "nginx"
   "node"
