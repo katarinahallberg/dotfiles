@@ -22,7 +22,7 @@ PACKAGES=(
   "grc"
   "htop-osx"
   "imagemagick"
-  "macvim"
+  "macvim --with-lua --without-python --with-python3"
   "mysql"
   "nginx"
   "node"
@@ -37,7 +37,7 @@ PACKAGES=(
   "tmux"
   "tree"
   "unrar"
-  "vim"
+  "vim --with-lua --without-python --with-python3"
   "wget"
   "youtube-dl"
 )
