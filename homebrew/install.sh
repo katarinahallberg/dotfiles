@@ -42,6 +42,11 @@ PACKAGES=(
   "youtube-dl"
 )
 
+# Apps to link to /Applications
+LINK_APPS=(
+  "macvim"
+)
+
 echo ""
 echo "  Running Homebrew install script"
 echo ""
@@ -79,6 +84,16 @@ if test $(which brew) ; then
     else
       echo "    * ${PACKAGE} already installed."
     fi
+  done
+fi
+
+# Link apps to /Applications
+if test $(which brew) ; then
+  echo ""
+  echo "  Checking if any apps should be linked to /Applications"
+  echo ""
+  for LINK_APP in ${LINK_APPS[@]} ; do
+    echo brew linkapps $LINK_APP
   done
 fi
 
