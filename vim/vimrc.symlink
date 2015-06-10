@@ -70,11 +70,6 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 let g:closetag_filenames = "*.html,*.swig,*.tpl"
 
 
-" Markdown preview
-" ---------------------------------------------------------------------------
-map <leader>p :Mm<CR>
-
-
 " NERDTree
 " ---------------------------------------------------------------------------
 
