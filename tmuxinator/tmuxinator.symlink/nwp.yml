@@ -1,9 +1,10 @@
 name: nwp
-root: ~/Sites/nwp2/
+root: /Volumes/ikea-prototype/nwp2/
 
 windows:
   - blog:
-      layout: main-vertical
+      layout: 024b,178x50,0,0{104x50,0,0,0,73x50,105,0[73x25,105,0,1,73x24,105,26,2]}
       panes:
         - c
-        - c && npm run dev
+        - c && npm run webpack
+        - c && npm run server
