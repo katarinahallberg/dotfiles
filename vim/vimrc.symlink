@@ -79,11 +79,6 @@ map <C-n> :NERDTreeToggle<CR>
 " Close vim if NERDTree is last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Open NERDTree at current buffer root
-" set autochdir
-" let NERDTreeChDirMode=2
-" nnoremap <leader>n :NERDTree .<CR>
-
 " Show invisible files in NERDTree
 let NERDTreeShowHidden=1
 
