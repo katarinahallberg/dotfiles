@@ -76,9 +76,6 @@ let g:closetag_filenames = "*.html,*.swig,*.tpl"
 " Open with Ctrl-n
 map <C-n> :NERDTreeToggle<CR>
 
-" Close vim if NERDTree is last window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 " Show invisible files in NERDTree
 let NERDTreeShowHidden=1
 
