@@ -76,14 +76,14 @@ fi
 # Install packages
 if test $(which brew) ; then
   echo ""
-  echo "  Checking for packages to install..."
+  echo "  Installing packages..."
   echo ""
   for PACKAGE in ${PACKAGES[@]} ; do
-    if ! brew list -1 | grep -q "^${PACKAGE}\$" ; then
+    # if ! brew list -1 | grep -q "^${PACKAGE}\$" ; then
       brew install $PACKAGE
-    else
-      echo "    * ${PACKAGE} already installed."
-    fi
+    # else
+      # echo "    * ${PACKAGE} already installed."
+    # fi
   done
 fi
 
