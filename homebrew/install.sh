@@ -22,7 +22,7 @@ PACKAGES=(
   "grc"
   "htop-osx"
   "imagemagick"
-  "macvim --with-lua --without-python --with-python3"
+  "macvim"
   "mysql"
   "nginx"
   "node"
@@ -37,10 +37,12 @@ PACKAGES=(
   "tmux"
   "tree"
   "unrar"
-  "vim --with-lua --without-python --with-python3"
+  "vim"
   "wget"
   "youtube-dl"
 )
+
+# TOD vim and macvim needs these as flags: " --with-lua --without-python --with-python3"
 
 # Apps to link to /Applications
 LINK_APPS=(
@@ -79,11 +81,11 @@ if test $(which brew) ; then
   echo "  Installing packages..."
   echo ""
   for PACKAGE in ${PACKAGES[@]} ; do
-    # if ! brew list -1 | grep -q "^${PACKAGE}\$" ; then
+    if ! brew list -1 | grep -q "^${PACKAGE}\$" ; then
       brew install $PACKAGE
-    # else
-      # echo "    * ${PACKAGE} already installed."
-    # fi
+    else
+      echo "    * ${PACKAGE} already installed."
+    fi
   done
 fi
 
