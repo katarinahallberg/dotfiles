@@ -167,8 +167,16 @@ set ruler                   " Always show info along bottom.
 scriptencoding utf-8
 set list lcs=tab:▸\ ,eol:¬,trail:·
 
-" Disable folding
-set nofoldenable
+
+
+" Code folding
+" ===========================================================================
+
+" Make sure folding does not occur automatically
+set foldlevelstart=99
+
+" Fold by indent level
+set foldmethod=indent
 
 
 
