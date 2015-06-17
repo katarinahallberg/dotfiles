@@ -1,5 +1,5 @@
 name: nwp
-root: /Volumes/ikea-prototype/nwp2/
+root: /Volumes/nwp/prototype/
 
 windows:
   - blog:
