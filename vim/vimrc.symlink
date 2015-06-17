@@ -51,7 +51,7 @@ set background=dark
 " ---------------------------------------------------------------------------
 
 " Use npm installed CSScomb
-autocmd FileType scss,css,less,styl nnoremap <buffer> <Leader>c :call CSScomb()<CR>
+autocmd FileType css nnoremap <buffer> <Leader>c :call CSScomb()<CR>
 function! CSScomb()
   execute "silent !csscomb " . expand('%')
   redraw!
