@@ -25,7 +25,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'yegappan/greplace'
 
 " Syntax plugins
-Plug 'brettof86/vim-swigjs'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/nginx.vim'
