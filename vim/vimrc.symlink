@@ -30,6 +30,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/nginx.vim'
 Plug 'wavded/vim-stylus'
+Plug 'mitsuhiko/vim-jinja'
 
 call plug#end()
 
@@ -215,8 +216,8 @@ set smarttab                " use tabs at the start of a line, spaces elsewherei
 " Syntaxes
 " ===========================================================================
 
-" swigjs
-au BufRead,BufNewFile *.swig setfiletype html
+" swigjs (using jinja)
+au BufRead,BufNewFile *.swig set filetype=htmljinja
 
 " git (symlinked)
 au BufRead,BufNewFile gitconfig.symlink,gitignore.symlink setfiletype git
