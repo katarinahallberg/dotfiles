@@ -2,7 +2,8 @@
 #
 # Setup required taps and install Homebrew packages
 
-set -e
+# Continue on errors
+set +e
 
 # Set up taps before installing
 TAPS=(
@@ -98,5 +99,8 @@ if test $(which brew) ; then
     echo brew linkapps $LINK_APP
   done
 fi
+
+# Resume halt on error
+set -e
 
 exit 0
