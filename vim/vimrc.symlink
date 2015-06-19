@@ -74,7 +74,7 @@ let g:closetag_filenames = "*.html,*.swig,*.tpl"
 " NERDTree
 " ---------------------------------------------------------------------------
 
-" Open with Ctrl-n
+" Toggle with Ctrl-n
 map <C-n> :NERDTreeToggle<CR>
 
 " Show invisible files in NERDTree
@@ -137,7 +137,6 @@ let g:gitgutter_sign_column_always = 1
 
 " Syntastic
 " ---------------------------------------------------------------------------
-
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_enable_signs = 1
 let g:syntastic_always_populate_loc_list = 1
@@ -145,13 +144,14 @@ let g:syntastic_always_populate_loc_list = 1
 
 " Vimgrep
 " ---------------------------------------------------------------------------
+
+" Quick-jump between results using Shift-Up/Down
 nnoremap <S-Down> :cnext<CR>
 nnoremap <S-Up>   :cprev<CR>
 
 
 " Search
 " ===========================================================================
-
 set hlsearch                " highlight all results
 set incsearch               " but do highlight as you type your search.
 set ignorecase              " make searches case-insensitive...
@@ -165,7 +165,6 @@ map <C-h> :noh<CR>
 
 " Visual Stuff
 " ===========================================================================
-
 set number                  " show line numbers
 set cursorline              " highlight the current line
 set history=200             " remember a lot of stuff
