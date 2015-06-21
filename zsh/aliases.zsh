@@ -7,6 +7,11 @@ if [[ "$(uname -s)" == "Darwin" ]] ; then
   alias l="ls -GF"
   alias df="gdf -H"
 
+  # Colored cat
+  if $(command -v ccat >/dev/null 2>&1) ; then
+    alias cat="ccat"
+  fi
+
   # Clean up "Open with…" menu
   alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user"
 
