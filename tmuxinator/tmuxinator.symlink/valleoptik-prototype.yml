@@ -1,0 +1,9 @@
+name: valleoptik-prototype
+root: ~/Sites/valleoptik-prototype/
+
+windows:
+  - valleoptik-prototype:
+      layout: main-vertical
+      panes:
+        - c
+        - c && hs -p 5000
