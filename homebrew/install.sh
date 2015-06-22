@@ -15,7 +15,6 @@ TAPS=(
 
 # Packages to install
 PACKAGES=(
-  "archey"
   "ccat"
   "coreutils"
   "editorconfig"
@@ -42,6 +41,11 @@ PACKAGES=(
   "vim"
   "wget"
   "youtube-dl"
+)
+
+# Packages to remove
+RM_PACKAGES=(
+  "archey"
 )
 
 # TOD vim and macvim needs these as flags: " --with-lua --without-python --with-python3"
@@ -98,6 +102,18 @@ if test $(which brew) ; then
   echo ""
   for LINK_APP in ${LINK_APPS[@]} ; do
     echo brew linkapps $LINK_APP
+  done
+fi
+
+# Remove packages
+if test $(which brew) ; then
+  echo ""
+  echo "  Removing packages..."
+  echo ""
+  for RM_PACKAGE in ${RM_PACKAGES[@]} ; do
+    if brew list -1 | grep -q "^${RM_PACKAGE}\$" ; then
+      brew uninstall $RM_PACKAGE
+    fi
   done
 fi
 
