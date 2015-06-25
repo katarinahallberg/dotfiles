@@ -29,7 +29,6 @@ Plug 'yegappan/greplace'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/nginx.vim'
-Plug 'wavded/vim-stylus'
 Plug 'mitsuhiko/vim-jinja'
 
 call plug#end()
