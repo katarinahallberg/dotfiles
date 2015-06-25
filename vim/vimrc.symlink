@@ -252,10 +252,6 @@ noremap   <Right>  <NOP>
 " Set leader
 let mapleader = ","
 
-" Leader mappings
-nmap <Leader>qn :cnext<CR>
-nmap <Leader>qp :cprev<CR>
-
 " Persistent undo
 set undofile
 set undodir=$HOME/.vim/undo
