@@ -15,6 +15,7 @@ TAPS=(
 
 # Packages to install
 PACKAGES=(
+  "ack"
   "ccat"
   "coreutils"
   "editorconfig"
