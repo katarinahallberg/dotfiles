@@ -24,6 +24,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'yegappan/greplace'
+Plug 'mileszs/ack.vim'
 
 " Syntax plugins
 Plug 'hail2u/vim-css3-syntax'
