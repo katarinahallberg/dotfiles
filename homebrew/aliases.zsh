@@ -1,2 +1,2 @@
-alias brews='brew list -1'
+alias brews='brew list --versions'
 alias bubu='brew update && brew upgrade --all && brew cleanup'
