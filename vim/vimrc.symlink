@@ -226,7 +226,7 @@ au BufRead,BufNewFile *.swig set filetype=htmljinja
 au BufRead,BufNewFile *.styl set filetype=css
 
 " git (symlinked)
-au BufRead,BufNewFile gitconfig.symlink,gitignore.symlink setfiletype git
+au BufRead,BufNewFile gitconfig.symlink,gitignore.symlink setfiletype gitconfig
 
 
 
