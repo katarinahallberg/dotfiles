@@ -1,5 +1,5 @@
 name: nwp
-root: /Volumes/nwp/prototype/
+root: ~/Sites/nwp/
 
 windows:
   - blog:
