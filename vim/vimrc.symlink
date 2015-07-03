@@ -223,8 +223,8 @@ set smarttab                " use tabs at the start of a line, spaces elsewherei
 " swigjs (using jinja)
 au BufRead,BufNewFile *.swig set filetype=htmljinja
 
-" stylus (using CSS)
-au BufRead,BufNewFile *.styl set filetype=css
+" stylus (using SCSS syntax)
+au BufRead,BufNewFile *.styl set filetype=scss
 
 " git (symlinked)
 au BufRead,BufNewFile gitconfig.symlink,gitignore.symlink setfiletype gitconfig
