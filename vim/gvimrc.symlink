@@ -1,10 +1,23 @@
-set guioptions-=T  " remove toolbar
-set guioptions-=m  " remove menu
-set guioptions-=r  " remove right-hand scroll bar
-set guioptions-=R  " remove right-hand scroll bar
-set guioptions-=l  " remove left-hand scroll bar
-set guioptions-=L  " remove left-hand scroll bar
-set guioptions-=e  " use text-mode tab bar
+" Remove toolbar
+set guioptions-=T
 
-" Font settings:
+" Remove menu
+set guioptions-=m
+
+" Remove right-hand scroll bar
+set guioptions-=r
+
+" Remove right-hand scroll bar
+set guioptions-=R
+
+" Remove left-hand scroll bar
+set guioptions-=l
+
+" Remove left-hand scroll bar
+set guioptions-=L
+
+" Use text-mode tab bar
+set guioptions-=e
+
+" Font settings
 set guifont=Menlo:h14
