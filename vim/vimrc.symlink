@@ -31,6 +31,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-haml'
+Plug 'tpope/vim-liquid'
 Plug 'vim-scripts/nginx.vim'
 
 call plug#end()
