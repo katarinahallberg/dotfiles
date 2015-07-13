@@ -35,6 +35,7 @@ PACKAGES=(
   "rbenv-gemset"
   "ruby-build"
   "ruby-completion"
+  "the_silver_searcher"
   "tidy-html5"
   "tmux"
   "tree"
