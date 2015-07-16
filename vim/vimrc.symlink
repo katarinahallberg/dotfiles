@@ -236,6 +236,9 @@ au BufRead,BufNewFile gitconfig.symlink,gitignore.symlink setfiletype gitconfig
 " Misc
 " ===========================================================================
 
+" Enable mouse
+set mouse=a
+
 " Remap some common actions
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>o :CtrlP<CR>
