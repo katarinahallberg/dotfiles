@@ -11,6 +11,7 @@ TAPS=(
   "homebrew/dupes"
   "homebrew/php"
   "homebrew/versions"
+  "yudai/gotty"
 )
 
 # Packages to install
@@ -21,6 +22,7 @@ PACKAGES=(
   "editorconfig"
   "gem-completion"
   "git"
+  "gotty"
   "grc"
   "htop-osx"
   "imagemagick"
