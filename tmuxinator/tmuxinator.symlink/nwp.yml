@@ -3,7 +3,7 @@ root: ~/Sites/nwp/
 
 windows:
   - blog:
-      layout: 024b,178x50,0,0{104x50,0,0,0,73x50,105,0[73x25,105,0,1,73x24,105,26,2]}
+      layout: d804,178x50,0,0{89x50,0,0,0,88x50,90,0[88x17,90,0,4,88x17,90,18,7,88x14,90,36,6]}
       panes:
         - c
         - c && NODE_ENV=development npm run dev:js
