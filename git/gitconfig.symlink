@@ -27,8 +27,7 @@
   quotepath = false
   autocrlf = input
 [branch]
-  autosetupmerge = true
-  rebase = true
+  autosetuprebase = always
 [mergetool]
   keepBackup = true
 [branch "master"]
