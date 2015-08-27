@@ -28,6 +28,7 @@
   autocrlf = input
 [branch]
   autosetupmerge = true
+  rebase = true
 [mergetool]
   keepBackup = true
 [branch "master"]
