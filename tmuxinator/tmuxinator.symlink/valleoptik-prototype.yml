@@ -3,7 +3,7 @@ root: ~/Sites/valleoptik-prototype/
 
 windows:
   - valleoptik-prototype:
-      layout: main-vertical
+      layout: 3b8e,178x50,0,0{110x50,0,0,4,67x50,111,0,5}
       panes:
         - c
         - c && hs -p 5000
