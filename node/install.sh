@@ -4,12 +4,13 @@
 
 set -e
 
-# Packages to install
+# Packages to install globally
 PACKAGES=(
   "autoprefixer"
   "bower"
   "csscomb"
   "grunt"
+  "gulp"
   "http-server"
   "live-server"
   "nodemon"
