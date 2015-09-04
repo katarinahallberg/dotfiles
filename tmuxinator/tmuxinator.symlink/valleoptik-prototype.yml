@@ -3,7 +3,8 @@ root: ~/Sites/valleoptik-prototype/
 
 windows:
   - valleoptik-prototype:
-      layout: 3b8e,178x50,0,0{110x50,0,0,4,67x50,111,0,5}
+      layout: 2b10,178x50,0,0{110x50,0,0,0,67x50,111,0[67x25,111,0,1,67x24,111,26,7]}
       panes:
         - c
         - c && hs -p 5000
+        - c && gulp
