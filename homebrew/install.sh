@@ -45,6 +45,7 @@ PACKAGES=(
   "vim"
   "wget"
   "youtube-dl"
+  "zsh"
 )
 
 # Packages to remove
