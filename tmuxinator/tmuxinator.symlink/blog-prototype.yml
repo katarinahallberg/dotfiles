@@ -3,7 +3,7 @@ root: ~/Sites/blog-prototype/
 
 windows:
   - blog-prototype:
-      layout: main-vertical
+      layout: 3b84,178x50,0,0{110x50,0,0,0,67x50,111,0,1}
       panes:
         - c
         - c && hs -p 4004
