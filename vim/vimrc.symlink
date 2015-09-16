@@ -30,7 +30,7 @@ Plug 'yegappan/greplace'
 
 " Syntax plugins
 Plug 'hail2u/vim-css3-syntax'
-Plug 'mitsuhiko/vim-jinja'
+Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'plasticboy/vim-markdown'
 Plug 'rosstimson/modx.vim'
 Plug 'tpope/vim-haml'
@@ -225,7 +225,7 @@ set smarttab                " use tabs at the start of a line, spaces elsewherei
 " ===========================================================================
 
 " swigjs (using jinja)
-au BufRead,BufNewFile *.swig set filetype=htmljinja
+au BufRead,BufNewFile *.swig set filetype=jinja
 
 " stylus (using SCSS syntax)
 au BufRead,BufNewFile *.styl set filetype=scss
