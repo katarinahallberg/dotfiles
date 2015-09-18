@@ -88,6 +88,18 @@ if test $(which brew) ; then
   done
 fi
 
+# Remove packages
+if test $(which brew) ; then
+  echo ""
+  echo "  Removing packages..."
+  echo ""
+  for RM_PACKAGE in ${RM_PACKAGES[@]} ; do
+    if brew list -1 | grep -q "^${RM_PACKAGE}\$" ; then
+      brew uninstall $RM_PACKAGE
+    fi
+  done
+fi
+
 # Install packages
 if test $(which brew) ; then
   echo ""
@@ -109,18 +121,6 @@ if test $(which brew) ; then
   echo ""
   for LINK_APP in ${LINK_APPS[@]} ; do
     echo brew linkapps $LINK_APP
-  done
-fi
-
-# Remove packages
-if test $(which brew) ; then
-  echo ""
-  echo "  Removing packages..."
-  echo ""
-  for RM_PACKAGE in ${RM_PACKAGES[@]} ; do
-    if brew list -1 | grep -q "^${RM_PACKAGE}\$" ; then
-      brew uninstall $RM_PACKAGE
-    fi
   done
 fi
 
