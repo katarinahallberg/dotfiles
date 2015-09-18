@@ -30,7 +30,8 @@ PACKAGES=(
   "mysql"
   "nginx"
   "node"
-  "php54"
+  "php56"
+  "php56-mcrypt"
   "python"
   "rbenv"
   "rbenv-gem-rehash"
@@ -50,7 +51,8 @@ PACKAGES=(
 
 # Packages to remove
 RM_PACKAGES=(
-  "archey"
+  "php54"
+  "php54-apc"
 )
 
 # TOD vim and macvim needs these as flags: " --with-lua --without-python --with-python3"
