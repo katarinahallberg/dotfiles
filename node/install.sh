@@ -4,6 +4,9 @@
 
 set -e
 
+# Cache already installed global packages
+INSTALLED_PACKAGES=( $(find `npm root -g` -type d -maxdepth 1 -not -path '*/\.*' -print0 | while IFS= read -r -d '' dirname; do echo ${dirname##*/}; done) )
+
 # Packages to install globally
 PACKAGES=(
   "autoprefixer"
@@ -13,9 +16,9 @@ PACKAGES=(
   "gulp"
   "http-server"
   "live-server"
+  "localtunnel"
   "nodemon"
   "nvm"
-  "localtunnel"
 )
 
 echo ""
@@ -27,7 +30,7 @@ if command -v npm >/dev/null 2>&1 ; then
   echo ""
   # Install npm packages globally
   for PACKAGE in ${PACKAGES[@]} ; do
-    if ! npm -g list | grep -q "${PACKAGE}" ; then
+    if ! echo ${INSTALLED_PACKAGES[@]} | grep -q "${PACKAGE}" ; then
       npm install -g $PACKAGE
     else
       echo "    * ${PACKAGE} already installed."
