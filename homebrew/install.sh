@@ -5,6 +5,12 @@
 # Continue on errors
 set +e
 
+# Cache list of already installed eackages
+INSTALLED_PACKAGES=( $(brew list -1) )
+
+# Cache taps as well
+TAPPED_TAPS=( $(brew tap) )
+
 # Set up taps before installing
 TAPS=(
   "homebrew/completions"
@@ -80,7 +86,7 @@ if command -v brew >/dev/null 2>&1 ; then
   echo "  Checking for anything to tap..."
   echo ""
   for TAP in ${TAPS[@]} ; do
-    if ! brew tap | grep -q "^${TAP}\$" ; then
+    if ! echo "${TAPPED_TAPS[@]}" | grep -q "${TAP}" ; then
       brew tap $TAP
     else
       echo "    * ${TAP} already tapped."
@@ -94,7 +100,7 @@ if command -v brew >/dev/null 2>&1 ; then
   echo "  Removing packages..."
   echo ""
   for RM_PACKAGE in ${RM_PACKAGES[@]} ; do
-    if brew list -1 | grep -q "^${RM_PACKAGE}\$" ; then
+    if echo "${INSTALLED_PACKAGES[@]}" | grep -q "${RM_PACKAGE}" ; then
       brew uninstall $RM_PACKAGE
     fi
   done
@@ -106,7 +112,7 @@ if command -v brew >/dev/null 2>&1 ; then
   echo "  Installing packages..."
   echo ""
   for PACKAGE in ${PACKAGES[@]} ; do
-    if ! brew list -1 | grep -q "^${PACKAGE}\$" ; then
+    if ! echo "${INSTALLED_PACKAGES[@]}" | grep -q "${PACKAGE}" ; then
       brew install $PACKAGE
     else
       echo "    * ${PACKAGE} already installed."
@@ -117,7 +123,7 @@ fi
 # Link apps to /Applications
 if command -v brew >/dev/null 2>&1 ; then
   echo ""
-  echo "  Checking if any apps should be linked to /Applications"
+  echo "  Linking relevant apps to /Applications"
   echo ""
   for LINK_APP in ${LINK_APPS[@]} ; do
     echo brew linkapps $LINK_APP
