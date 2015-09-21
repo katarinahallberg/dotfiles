@@ -94,7 +94,7 @@ if command -v brew >/dev/null 2>&1 ; then
   done
 fi
 
-# Remove packages
+# Remove packages (do this before attempting to install to prevent conflicts)
 if command -v brew >/dev/null 2>&1 ; then
   echo ""
   echo "  Removing packages..."
