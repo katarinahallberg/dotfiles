@@ -22,7 +22,7 @@ echo ""
 echo "  Running Node install script"
 
 # Check for npm
-if test $(which npm) ; then
+if command -v npm >/dev/null 2>&1 ; then
   echo "  Looks like npm is installed. Checking for packages to install."
   echo ""
   # Install npm packages globally

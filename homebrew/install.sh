@@ -68,14 +68,14 @@ echo ""
 
 # Check if we're on Darwin, then check for Homebrew
 if [[ "$(uname -s)" == "Darwin" ]] ; then
-  if test ! $(which brew) ; then
+  if ! command -v brew >/dev/null 2>&1 ; then
     echo "  Installing Homebrew for you."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 fi
 
 # Set up taps
-if test $(which brew) ; then
+if command -v brew >/dev/null 2>&1 ; then
   echo ""
   echo "  Checking for anything to tap..."
   echo ""
@@ -89,7 +89,7 @@ if test $(which brew) ; then
 fi
 
 # Remove packages
-if test $(which brew) ; then
+if command -v brew >/dev/null 2>&1 ; then
   echo ""
   echo "  Removing packages..."
   echo ""
@@ -101,7 +101,7 @@ if test $(which brew) ; then
 fi
 
 # Install packages
-if test $(which brew) ; then
+if command -v brew >/dev/null 2>&1 ; then
   echo ""
   echo "  Installing packages..."
   echo ""
@@ -115,7 +115,7 @@ if test $(which brew) ; then
 fi
 
 # Link apps to /Applications
-if test $(which brew) ; then
+if command -v brew >/dev/null 2>&1 ; then
   echo ""
   echo "  Checking if any apps should be linked to /Applications"
   echo ""
