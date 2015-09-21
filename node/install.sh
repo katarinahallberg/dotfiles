@@ -4,7 +4,7 @@
 
 set -e
 
-# Cache already installed global packages
+# Cache list of already installed global packages
 INSTALLED_PACKAGES=( $(find `npm root -g` -type d -maxdepth 1 -not -path '*/\.*' -print0 | while IFS= read -r -d '' dirname; do echo ${dirname##*/}; done) )
 
 # Packages to install globally
