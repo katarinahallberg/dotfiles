@@ -1,9 +1,9 @@
 # tmux configuration
 #
 
+# General settings
 set -g utf8
 set-window-option -g utf8 on
-
 set -g default-terminal "screen-256color"
 
 # Reset base index to 1
