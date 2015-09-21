@@ -8,7 +8,7 @@ if [[ "$(uname -s)" == "Darwin" ]] ; then
   alias df="gdf -H"
 
   # Colored cat
-  if $(command -v ccat >/dev/null 2>&1) ; then
+  if command -v ccat >/dev/null 2>&1 ; then
     alias cat="ccat"
   fi
 
