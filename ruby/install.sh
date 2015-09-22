@@ -37,11 +37,11 @@ fi
 if command -v rbenv >/dev/null 2>&1 ; then
   # Check if our selected version of Ruby is installed
   if ! [[ $(rbenv global) == ${RUBY_VERSION} ]] ; then
-    echo " Installing Ruby for you."
+    echo "  √ Installing Ruby for you."
     rbenv install ${RUBY_VERSION}
     rbenv global ${RUBY_VERSION}
   fi
-  echo "  √ Updating your environment."
+  echo "  √ Updating your environment. (gem update --system)"
   eval "$(rbenv init -)"
   gem update --system
   echo ""
