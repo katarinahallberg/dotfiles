@@ -15,18 +15,18 @@ GEMS=(
 )
 
 echo ""
-echo "Running Ruby install script"
+echo "  √ Running Ruby install script"
 echo ""
 
 if ! command -v rbenv >/dev/null 2>&1 ; then
-  echo "  Installing rbenv for you."
+  echo "  √ Installing rbenv for you."
   if [[ "$(uname -s)" == "Darwin" ]] ; then
     brew install rbenv > /tmp/rbenv-install.log
   fi
 fi
 
 if ! command -v ruby-build >/dev/null 2>&1 ; then
-  echo "  Installing ruby-build and rbenv-gem-rehash for you."
+  echo "  √ Installing ruby-build and rbenv-gem-rehash for you."
   if [[ "$(uname -s)" == "Darwin" ]] ; then
     brew install ruby-build > /tmp/ruby-build-install.log
     brew install rbenv-gem-rehash > /tmp/rbenv-gem-rehash-install.log
@@ -41,16 +41,15 @@ if command -v rbenv >/dev/null 2>&1 ; then
     rbenv install ${RUBY_VERSION}
     rbenv global ${RUBY_VERSION}
   fi
-  echo "  Updating your environment."
+  echo "  √ Updating your environment."
   eval "$(rbenv init -)"
   gem update --system
-  echo "  Checking for gems to install."
+  echo ""
+  echo "  √ Checking for gems to install."
   echo ""
   for GEM in ${GEMS[@]} ; do
     if [[ "$(gem list ${GEM} -i)" == "false" ]] ; then
       gem install $GEM
-    else
-      echo "    * $GEM already installed."
     fi
   done
 fi

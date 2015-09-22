@@ -69,8 +69,7 @@ LINK_APPS=(
 )
 
 echo ""
-echo "  Running Homebrew install script"
-echo ""
+echo "  √ Running Homebrew install script"
 
 # Check if we're on Darwin, then check for Homebrew
 if [[ "$(uname -s)" == "Darwin" ]] ; then
@@ -83,13 +82,10 @@ fi
 # Set up taps
 if command -v brew >/dev/null 2>&1 ; then
   echo ""
-  echo "  Checking for anything to tap..."
-  echo ""
+  echo "  √ Checking for anything to tap..."
   for TAP in ${TAPS[@]} ; do
     if ! echo "${TAPPED_TAPS[@]}" | grep -q "${TAP}" ; then
       brew tap $TAP
-    else
-      echo "    * ${TAP} already tapped."
     fi
   done
 fi
@@ -97,8 +93,7 @@ fi
 # Remove packages (do this before attempting to install to prevent conflicts)
 if command -v brew >/dev/null 2>&1 ; then
   echo ""
-  echo "  Removing packages..."
-  echo ""
+  echo "  √ Removing packages..."
   for RM_PACKAGE in ${RM_PACKAGES[@]} ; do
     if echo "${INSTALLED_PACKAGES[@]}" | grep -q "${RM_PACKAGE}" ; then
       brew uninstall $RM_PACKAGE
@@ -109,13 +104,10 @@ fi
 # Install packages
 if command -v brew >/dev/null 2>&1 ; then
   echo ""
-  echo "  Installing packages..."
-  echo ""
+  echo "  √ Installing packages..."
   for PACKAGE in ${PACKAGES[@]} ; do
     if ! echo "${INSTALLED_PACKAGES[@]}" | grep -q "${PACKAGE}" ; then
       brew install $PACKAGE
-    else
-      echo "    * ${PACKAGE} already installed."
     fi
   done
 fi
@@ -123,10 +115,10 @@ fi
 # Link apps to /Applications
 if command -v brew >/dev/null 2>&1 ; then
   echo ""
-  echo "  Linking relevant apps to /Applications"
+  echo "  √ Linking relevant apps to /Applications"
   echo ""
   for LINK_APP in ${LINK_APPS[@]} ; do
-    echo brew linkapps $LINK_APP
+    echo "    * Linking $LINK_APP"
   done
 fi
 

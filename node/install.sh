@@ -22,20 +22,20 @@ PACKAGES=(
 )
 
 echo ""
-echo "  Running Node install script"
+echo "  √ Running Node install script"
+echo ""
 
 # Check for npm
 if command -v npm >/dev/null 2>&1 ; then
-  echo "  Looks like npm is installed. Checking for packages to install."
-  echo ""
+  echo "  √ Looks like npm is installed. Checking for packages to install."
   # Install npm packages globally
   for PACKAGE in ${PACKAGES[@]} ; do
     if ! echo ${INSTALLED_PACKAGES[@]} | grep -q "${PACKAGE}" ; then
       npm install -g $PACKAGE
-    else
-      echo "    * ${PACKAGE} already installed."
     fi
   done
+else
+  echo "  ✗ Aw, crap! Looks like npm is not installed. Better check what went wrong."
 fi
 
 exit 0
