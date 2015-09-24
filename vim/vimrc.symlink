@@ -233,6 +233,9 @@ au BufRead,BufNewFile *.styl set filetype=scss
 " git (symlinked)
 au BufRead,BufNewFile gitconfig.symlink,gitignore.symlink setfiletype gitconfig
 
+" nginx
+au BufRead,BufNewFile */nginx/* set filetype=nginx
+
 
 
 " Misc
