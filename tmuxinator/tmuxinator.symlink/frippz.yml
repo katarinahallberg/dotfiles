@@ -6,4 +6,4 @@ windows:
       layout: 63bc,178x50,0,0{105x50,0,0,0,72x50,106,0,1}
       panes:
         - c
-        - c && jekyll serve --drafts
+        - c && jekyll serve
