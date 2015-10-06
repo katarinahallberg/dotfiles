@@ -12,6 +12,7 @@ PACKAGES=(
   "autoprefixer"
   "bower"
   "csscomb"
+  "eslint"
   "grunt"
   "gulp"
   "http-server"
