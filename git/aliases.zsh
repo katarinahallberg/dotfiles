@@ -60,6 +60,10 @@ alias glog='git log --oneline --decorate --color --graph'
 alias gcount='git shortlog -sn'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
+# Cleaning
+alias ggc='git gc'
+alias gfp='git fetch --prune'
+
 # Other (unsorted)
 alias gcl='git config --list'
 alias gclean='git reset --hard && git clean -dfx'
