@@ -19,6 +19,7 @@ PACKAGES=(
   "live-server"
   "localtunnel"
   "nodemon"
+  "npm-check-updates"
   "nvm"
 )
 
