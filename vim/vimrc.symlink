@@ -237,6 +237,9 @@ au BufRead,BufNewFile gitconfig.symlink,gitignore.symlink setfiletype gitconfig
 " nginx
 au BufRead,BufNewFile */nginx/* set filetype=nginx
 
+" JSON
+au BufRead,BufNewFile *csslintrc*,*htmlhintrc*,*eslintrc* set filetype=json
+
 
 
 " Misc
