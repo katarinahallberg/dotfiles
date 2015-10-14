@@ -59,12 +59,7 @@ RM_PACKAGES=(
   "the_silver_searcher"
 )
 
-# TOD vim and macvim needs these as flags: " --with-lua --without-python --with-python3"
-
-# Apps to link to /Applications
-LINK_APPS=(
-  "macvim"
-)
+# TODO vim and macvim needs these as flags: " --with-lua --without-python --with-python3"
 
 echo ""
 echo "  √ Running Homebrew install script"
@@ -107,16 +102,6 @@ if command -v brew >/dev/null 2>&1 ; then
     if ! echo "${INSTALLED_PACKAGES[@]}" | grep -q "${PACKAGE}" ; then
       brew install $PACKAGE
     fi
-  done
-fi
-
-# Link apps to /Applications
-if command -v brew >/dev/null 2>&1 ; then
-  echo ""
-  echo "  √ Linking relevant apps to /Applications"
-  echo ""
-  for LINK_APP in ${LINK_APPS[@]} ; do
-    echo "    * Linking $LINK_APP"
   done
 fi
 
