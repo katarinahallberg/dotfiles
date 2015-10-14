@@ -56,8 +56,7 @@ PACKAGES=(
 
 # Packages to remove
 RM_PACKAGES=(
-  "php54"
-  "php54-apc"
+  "the_silver_searcher"
 )
 
 # TOD vim and macvim needs these as flags: " --with-lua --without-python --with-python3"
