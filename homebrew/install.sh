@@ -86,7 +86,7 @@ fi
 # Remove packages (do this before attempting to install to prevent conflicts)
 if command -v brew >/dev/null 2>&1 ; then
   echo ""
-  echo "  √ Removing packages..."
+  echo "  √ Checking for packages to remove..."
   for RM_PACKAGE in ${RM_PACKAGES[@]} ; do
     if echo "${INSTALLED_PACKAGES[@]}" | grep -q "${RM_PACKAGE}" ; then
       brew uninstall $RM_PACKAGE
@@ -97,7 +97,7 @@ fi
 # Install packages
 if command -v brew >/dev/null 2>&1 ; then
   echo ""
-  echo "  √ Installing packages..."
+  echo "  √ Checking for packages to install..."
   for PACKAGE in ${PACKAGES[@]} ; do
     if ! echo "${INSTALLED_PACKAGES[@]}" | grep -q "${PACKAGE}" ; then
       brew install $PACKAGE
