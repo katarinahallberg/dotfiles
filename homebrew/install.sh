@@ -5,7 +5,7 @@
 # Continue on errors
 set +e
 
-if ! command -v brew >/dev/null 2>&1 ; then
+if command -v brew >/dev/null 2>&1 ; then
   # Cache list of already installed eackages
   INSTALLED_PACKAGES=( $(brew list -1) )
 
