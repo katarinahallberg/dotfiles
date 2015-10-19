@@ -5,11 +5,13 @@
 # Continue on errors
 set +e
 
-# Cache list of already installed eackages
-INSTALLED_PACKAGES=( $(brew list -1) )
+if ! command -v brew >/dev/null 2>&1 ; then
+  # Cache list of already installed eackages
+  INSTALLED_PACKAGES=( $(brew list -1) )
 
-# Cache taps as well
-TAPPED_TAPS=( $(brew tap) )
+  # Cache taps as well
+  TAPPED_TAPS=( $(brew tap) )
+fi
 
 # Set up taps before installing
 TAPS=(
