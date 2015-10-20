@@ -30,8 +30,9 @@ Plug 'tpope/vim-unimpaired'
 Plug 'yegappan/greplace'
 
 " Syntax plugins
-Plug 'hail2u/vim-css3-syntax'
 Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'plasticboy/vim-markdown'
 Plug 'rosstimson/modx.vim'
 Plug 'tpope/vim-haml'
