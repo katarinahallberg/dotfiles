@@ -1,0 +1,4 @@
+[submodule "vim/vim.symlink/plugged/greplace"]
+  path = vim/vim.symlink/plugged/greplace
+  url = git@github.com:yegappan/greplace.git
+  ignore = dirty
