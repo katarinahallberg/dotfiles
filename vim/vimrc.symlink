@@ -249,6 +249,9 @@ au BufRead,BufNewFile *csslintrc*,*htmlhintrc*,*eslintrc* set filetype=json
 " Enable mouse
 set mouse=a
 
+" Disable netrwhist
+let g:netrw_dirhistmax = 0
+
 " Remap some common actions
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>o :CtrlP<CR>
