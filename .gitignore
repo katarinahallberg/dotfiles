@@ -1,4 +1,4 @@
 # Ignore plugins and other vim stuff
-vim/vim.symlink/plugged
-vim/vim.symlink/.netrwhist
+# vim/vim.symlink/plugged
+# vim/vim.symlink/.netrwhist
 npm-debug.log
