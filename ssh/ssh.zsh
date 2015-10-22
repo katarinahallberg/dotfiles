@@ -9,9 +9,9 @@ ssh_agent () {
     ssh_update
   else
     SSHPID="$(ps -eo pid,command | awk '/ ssh-[a]gent/ {print $1}');"
-    SSHPID_ENV=$(awk  '/Agent/ {print $NF}' ~/.ssh-env)
+    SSHPID_ENV=$(awk  '/Agent/ {print $NF}' $HOME/.ssh-env)
     if [[ $SSHPID == $SSHPID_ENV ]] ; then
-      source ~/.ssh-env
+      source $HOME/.ssh-env
     else
       killall ssh-agent
       ssh_update
@@ -20,8 +20,8 @@ ssh_agent () {
 }
 
 ssh_update () {
-  ssh-agent > ~/.ssh-env
-  source ~/.ssh-env
+  ssh-agent > $HOME/.ssh-env
+  source $HOME/.ssh-env
 }
 
 ssh_add () {
