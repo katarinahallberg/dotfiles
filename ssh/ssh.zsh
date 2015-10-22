@@ -32,4 +32,4 @@ ssh_add () {
   fi
 }
 
-ssh_agent
+# ssh_agent
