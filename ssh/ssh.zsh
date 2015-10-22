@@ -34,4 +34,4 @@ ssh_add () {
   fi
 }
 
-# ssh_agent
+ssh_agent >/dev/null 2>&1
