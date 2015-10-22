@@ -3,15 +3,17 @@
 # Based on http://larryn.blogspot.se/2015/05/zsh-and-ssh-agent.html
 #
 
+AGENT_ENV=$HOME/.agent-env
+
 ssh_agent () {
   SSH_AGENT=$(ps ax|grep "[s]sh-agent"| grep -cv Z)
   if (( $SSH_AGENT == 0 )) ; then
     ssh_update
   else
     SSHPID="$(ps -eo pid,command | awk '/ ssh-[a]gent/ {print $1}');"
-    SSHPID_ENV=$(awk  '/Agent/ {print $NF}' $HOME/.ssh-env)
+    SSHPID_ENV=$(awk  '/Agent/ {print $NF}' $AGENT_ENV)
     if [[ $SSHPID == $SSHPID_ENV ]] ; then
-      source $HOME/.ssh-env
+      source $AGENT_ENV
     else
       killall ssh-agent
       ssh_update
@@ -20,8 +22,8 @@ ssh_agent () {
 }
 
 ssh_update () {
-  ssh-agent > $HOME/.ssh-env
-  source $HOME/.ssh-env
+  ssh-agent > $AGENT_ENV
+  source $AGENT_ENV
 }
 
 ssh_add () {
