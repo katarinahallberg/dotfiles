@@ -202,8 +202,14 @@ set foldmethod=indent
 " Files
 " ===========================================================================
 
-set autoread                " auto-reload files changed on disk
-set updatecount=0           " disable swap files
+" auto-reload files changed on disk
+set autoread
+
+" check for changes after inactivity
+au CursorHold * checktime
+
+" disable swap files
+set updatecount=0
 set nobackup
 set noswapfile
 
