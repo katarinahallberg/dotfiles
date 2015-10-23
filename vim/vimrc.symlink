@@ -218,7 +218,6 @@ set noswapfile
 " Indentation
 " ===========================================================================
 
-set cindent
 set autoindent              " auto-indent
 set tabstop=2               " tab spacing
 set softtabstop=2           " unify
