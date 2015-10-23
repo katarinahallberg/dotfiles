@@ -40,3 +40,9 @@ bind K confirm kill-server
 # Window notifications
 setw -g monitor-activity on
 set -g visual-activity on
+
+# Plugins
+set -g @plugin 'nhdaly/tmux-scroll-copy-mode'
+
+# Initialize TMUX plugin manager
+run '~/.tmux/plugins/tpm/tpm'
