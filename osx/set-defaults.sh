@@ -64,6 +64,13 @@ defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
+# MacVim                                                                      #
+###############################################################################
+
+# Disable subpixel antialiasing
+defaults write org.vim.MacVim AppleFontSmoothing -int 0
+
+###############################################################################
 # Safari                                                                      #
 ###############################################################################
 
