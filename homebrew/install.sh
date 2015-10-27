@@ -25,6 +25,7 @@ TAPS=(
 # Packages to install
 PACKAGES=(
   "ack"
+  "brew-cask"
   "ccat"
   "coreutils"
   "editorconfig"
@@ -59,6 +60,18 @@ PACKAGES=(
 # Packages to remove
 RM_PACKAGES=(
   "the_silver_searcher"
+)
+
+# Casks to install
+CASKS=(
+  "appcleaner"
+  "dockertoolbox"
+  "diskwave"
+  "firefox"
+  "dropbox"
+  "google-chrome"
+  "carbon-copy-cloner"
+  "sequel-pro"
 )
 
 # TODO vim and macvim needs these as flags: " --with-lua --without-python --with-python3"
