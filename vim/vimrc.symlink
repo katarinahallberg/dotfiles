@@ -265,6 +265,9 @@ au BufRead,BufNewFile *csslintrc*,*htmlhintrc*,*eslintrc* set filetype=json
 " Enable mouse
 set mouse=a
 
+" Speed up Ruby syntax highlighting
+set re=1
+
 " Disable netrwhist
 let g:netrw_dirhistmax = 0
 
