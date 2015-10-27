@@ -15,6 +15,7 @@ fi
 
 # Set up taps before installing
 TAPS=(
+  "caskroom/cask"
   "homebrew/completions"
   "homebrew/dupes"
   "homebrew/php"
