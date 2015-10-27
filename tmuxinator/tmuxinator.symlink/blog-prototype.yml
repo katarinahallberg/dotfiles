@@ -3,8 +3,7 @@ root: ~/Sites/blog-prototype/
 
 windows:
   - blog-prototype:
-      layout: b762,178x48,0,0{110x48,0,0,6,67x48,111,0[67x9,111,0,7,67x38,111,10,8]}
+      layout: fa1e,178x50,0,0{117x50,0,0,4,60x50,118,0,6}
       panes:
-        - c
-        - c && hs -p 4004 dist
-        - c && gulp
+        -
+        - gulp
