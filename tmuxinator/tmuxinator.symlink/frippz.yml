@@ -3,7 +3,7 @@ root: ~/Sites/frippz.se/
 
 windows:
   - frippz.se:
-      layout: 63bc,178x50,0,0{105x50,0,0,0,72x50,106,0,1}
+      layout: c22d,178x50,0,0{118x50,0,0,9,59x50,119,0,10}
       panes:
         - c
         - c && jekyll serve
