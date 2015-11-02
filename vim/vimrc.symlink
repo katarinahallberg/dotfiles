@@ -17,9 +17,8 @@ Plug 'morhetz/gruvbox'
 Plug 'nelstrom/vim-qargs'
 Plug 'raimondi/delimitMate'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
-Plug 'shougo/neocomplete.vim'
 Plug 'tmhedberg/matchit'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
@@ -28,6 +27,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'yegappan/greplace'
+Plug 'valloric/youcompleteme', { 'do': './install.py' }
 
 " Syntax plugins
 Plug 'Glench/Vim-Jinja2-Syntax'
