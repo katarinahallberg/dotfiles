@@ -46,7 +46,7 @@ call plug#end()
 " ===========================================================================
 
 " Set leader
-let mapleader = ",""
+let mapleader = ","
 
 
 " NeoVim features
