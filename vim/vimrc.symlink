@@ -268,6 +268,9 @@ set mouse=a
 " Speed up Ruby syntax highlighting
 set re=1
 
+" Default netrw list style
+let g:netrw_liststyle=3
+
 " Disable netrwhist
 let g:netrw_dirhistmax = 0
 
