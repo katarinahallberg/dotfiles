@@ -16,9 +16,9 @@ alias gr='git remote'
 alias ga='git add'
 alias gaa='git add --all'
 alias gap='git add --patch'
-alias gb='git branch'
 
 # Branch
+alias gb='git branch'
 alias gba='git branch -a'
 alias gbr='git branch --remote'
 alias gc!='git commit -v --amend'
