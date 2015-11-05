@@ -11,6 +11,7 @@ RUBY_VERSION="2.2.2"
 GEMS=(
   "bundler"
   "jekyll"
+  "jekyll-paginate"
   "tmuxinator"
 )
 
