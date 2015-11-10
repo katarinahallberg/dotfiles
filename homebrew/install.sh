@@ -55,13 +55,12 @@ PACKAGES=(
   "wget"
   "youtube-dl"
   "zsh"
-  "zsh-completions"
   "zsh-syntax-highlighting"
 )
 
 # Packages to remove
 RM_PACKAGES=(
-  "brew-cask"
+  "zsh-completions"
 )
 
 # TODO vim and macvim needs these as flags: " --with-lua --without-python --with-python3"
