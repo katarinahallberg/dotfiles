@@ -55,6 +55,8 @@ PACKAGES=(
   "wget"
   "youtube-dl"
   "zsh"
+  "zsh-completions"
+  "zsh-syntax-highlighting"
 )
 
 # Packages to remove
