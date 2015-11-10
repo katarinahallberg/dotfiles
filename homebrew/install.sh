@@ -50,6 +50,7 @@ PACKAGES=(
   "tmux"
   "tree"
   "unrar"
+  "unzip"
   "vim"
   "wget"
   "youtube-dl"
