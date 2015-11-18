@@ -39,7 +39,7 @@ if command -v npm >/dev/null 2>&1 ; then
     fi
   done
 else
-  echo "  ✗ Aw, crap! Looks like npm is not installed. Better check what went wrong."
+  echo "  ✗ npm is not installed. Skipping..."
 fi
 
 exit 0
