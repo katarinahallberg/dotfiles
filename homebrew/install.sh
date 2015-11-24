@@ -19,6 +19,7 @@ TAPS=(
   "homebrew/dupes"
   "homebrew/php"
   "homebrew/versions"
+  "neovim/neovim"
   "yudai/gotty"
 )
 
@@ -36,6 +37,7 @@ PACKAGES=(
   "imagemagick"
   "macvim"
   "mysql"
+  "neovim"
   "nginx"
   "node"
   "php56"
