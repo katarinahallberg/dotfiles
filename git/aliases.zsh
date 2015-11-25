@@ -5,7 +5,7 @@ alias g='git'
 
 # Base commands
 alias gco='git checkout'
-alias gf='git fetch'
+alias gf='git fetch --prune'
 alias gm='git merge'
 alias gl='git pull'
 alias gp='git push'
@@ -62,7 +62,6 @@ alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
 # Cleaning
 alias ggc='git gc'
-alias gfp='git fetch --prune'
 
 # Other (unsorted)
 alias gcl='git config --list'
