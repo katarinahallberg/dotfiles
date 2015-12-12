@@ -28,6 +28,7 @@ PACKAGES=(
   "ack"
   "ccat"
   "coreutils"
+  "dos2unix"
   "editorconfig"
   "gem-completion"
   "git"
