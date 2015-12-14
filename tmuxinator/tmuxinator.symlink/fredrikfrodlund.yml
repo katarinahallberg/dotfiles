@@ -1,9 +1,0 @@
-name: fredrikfrodlund
-root: ~/Sites/fredrikfrodlund.se/
-
-windows:
-  - blog:
-      layout: main-vertical
-      panes:
-        - c
-        - c && jekyll serve --drafts
