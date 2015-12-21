@@ -38,6 +38,8 @@ Plug 'rosstimson/modx.vim'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-liquid'
 Plug 'vim-scripts/nginx.vim'
+Plug 'chrisbra/csv.vim'
+Plug 'seveas/bind.vim'
 
 call plug#end()
 
