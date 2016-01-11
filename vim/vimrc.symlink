@@ -31,15 +31,16 @@ Plug 'yegappan/greplace'
 
 " Syntax plugins
 Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'chrisbra/csv.vim'
 Plug 'hail2u/vim-css3-syntax'
+Plug 'jsx/jsx.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'plasticboy/vim-markdown'
 Plug 'rosstimson/modx.vim'
+Plug 'seveas/bind.vim'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-liquid'
 Plug 'vim-scripts/nginx.vim'
-Plug 'chrisbra/csv.vim'
-Plug 'seveas/bind.vim'
 
 call plug#end()
 
