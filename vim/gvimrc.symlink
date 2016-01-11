@@ -20,4 +20,4 @@ set guioptions-=L
 set guioptions-=e
 
 " Font settings
-set guifont=Menlo:h14
+set guifont=Menlo\ Regular:h14
