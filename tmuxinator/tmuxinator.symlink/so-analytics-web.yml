@@ -1,8 +1,8 @@
-name: so-floorplan-web
-root: ~/Sites/so-floorplan-web/
+name: so-analytics-web
+root: ~/Sites/so-analytics-web/
 
 windows:
-  - so-floorplan-web:
+  - so-analytics-web:
       layout: 839c,178x50,0,0{118x50,0,0,0,59x50,119,0,1}
       panes:
         - c
