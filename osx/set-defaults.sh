@@ -71,6 +71,13 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 defaults write org.vim.MacVim AppleFontSmoothing -int 0
 
 ###############################################################################
+# Photos                                                                      #
+###############################################################################
+
+# Don't launch Photos if a device is plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+###############################################################################
 # Safari                                                                      #
 ###############################################################################
 
