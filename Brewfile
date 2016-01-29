@@ -8,6 +8,7 @@ tap "yudai/gotty"
 
 # Packages
 brew "ack"
+brew "awscli"
 brew "ccat"
 brew "coreutils"
 brew "dos2unix"
