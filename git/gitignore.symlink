@@ -4,6 +4,9 @@
 .LSOverride
 .htpasswd
 
+# direnv file
+.envrc
+
 # TextMate config file
 .tm_properties
 
