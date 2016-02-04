@@ -20,6 +20,7 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'shougo/neocomplete.vim'
+Plug 'shougo/deoplete.nvim'
 Plug 'tmhedberg/matchit'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
@@ -59,6 +60,8 @@ if has('nvim')
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   " Allow change of cursor shape
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+  " Enable deoplete
+  let g:deoplete#enable_at_startup = 1
 endif
 
 
