@@ -207,7 +207,7 @@ set smartcase               " ... unless they contain at least one capital lette
 set gdefault                " have :s///g flag by default on"
 
 " Remove search highlight
-map <C-h> :noh<CR>
+map <Leader>h :noh<CR>
 
 
 
@@ -290,6 +290,9 @@ au BufRead,BufNewFile *csslintrc*,*htmlhintrc*,*eslintrc* set filetype=json
 
 " Enable mouse
 set mouse=a
+
+" Disable delays for <Leader>
+set timeoutlen=1000 ttimeoutlen=0
 
 " Speed up Ruby syntax highlighting
 set re=1
