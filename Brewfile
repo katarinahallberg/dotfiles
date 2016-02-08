@@ -20,7 +20,6 @@ brew "gotty"
 brew "grc"
 brew "htop-osx"
 brew "imagemagick"
-brew "macvim", args: ["--with-lua", "--without-python", "--with-python3"]
 brew "mysql"
 brew "neovim"
 brew "neovim-dot-app", args: ["HEAD"]
