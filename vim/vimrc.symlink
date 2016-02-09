@@ -206,7 +206,7 @@ set smartcase               " ... unless they contain at least one capital lette
 set gdefault                " have :s///g flag by default on"
 
 " Remove search highlight
-map <Leader>h :noh<CR>
+map <C-h> :noh<CR>
 
 
 
