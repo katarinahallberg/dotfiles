@@ -38,6 +38,9 @@ alias c="clear"
 alias x="exit"
 alias grep="grep --color"
 
+# Default to neovim (holy shit!)
+alias vim="nvim"
+
 # Nice looking time stamp
 alias tstamp="date +%Y%m%d%H%M"
 
