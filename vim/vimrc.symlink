@@ -291,7 +291,9 @@ au BufRead,BufNewFile *csslintrc*,*htmlhintrc*,*eslintrc* set filetype=json
 set mouse=a
 
 " Disable delays for <Leader>
-set timeoutlen=1000 ttimeoutlen=0
+set timeoutlen=1000
+set ttimeout
+set ttimeoutlen=0
 
 " Speed up Ruby syntax highlighting
 set re=1
