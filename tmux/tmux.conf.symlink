@@ -20,7 +20,6 @@ setw -g pane-base-index 1
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
 
 # Mouse support
-set -g mouse
 set-option -g mouse on
 
 # No delay for escape
