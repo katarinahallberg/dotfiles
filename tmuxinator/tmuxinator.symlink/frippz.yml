@@ -6,5 +6,5 @@ windows:
       layout: 3141,178x50,0,0{118x50,0,0,15,59x50,119,0[59x25,119,0,16,59x24,119,26,18]}
       panes:
         - c
-        - c && bundle exec jekyll s
+        - c && bundle exec jekyll s --drafts
         - c && gulp
