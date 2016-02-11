@@ -44,8 +44,5 @@ bind K confirm kill-server
 setw -g monitor-activity on
 set -g visual-activity on
 
-# Plugins
-set -g @plugin 'nhdaly/tmux-scroll-copy-mode'
-
-# Initialize TMUX plugin manager
-run '~/.tmux/plugins/tpm/tpm'
+# Fix mouse scrolling like the good old days
+run-shell ~/.tmux/plugins/tmux-scroll-copy-mode/scroll_copy_mode.tmux
