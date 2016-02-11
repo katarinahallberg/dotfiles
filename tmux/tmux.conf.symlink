@@ -20,8 +20,9 @@ setw -g pane-base-index 1
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
 
 # Mouse support
-set -g mouse
-set-option -g mouse on
+set -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
 
 # No delay for escape
 set -s escape-time 0
@@ -44,6 +45,3 @@ bind K confirm kill-server
 # Window notifications
 setw -g monitor-activity on
 set -g visual-activity on
-
-# Fix mouse scrolling like the good old days
-run-shell ~/.tmux/plugins/tmux-scroll-copy-mode/scroll_copy_mode.tmux
