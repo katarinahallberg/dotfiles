@@ -6,4 +6,4 @@ windows:
       layout: 3b91,178x50,0,0{110x50,0,0,5,67x50,111,0,7}
       panes:
         - c
-        - c && gulp
+        - c && npm start
