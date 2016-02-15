@@ -1,0 +1,9 @@
+name: so-analytics-web
+root: ~/Sites/so-analytics-web/
+
+windows:
+  - so-analytics-web:
+      layout: 839c,178x50,0,0{118x50,0,0,0,59x50,119,0,1}
+      panes:
+        - c
+        - c && npm start
