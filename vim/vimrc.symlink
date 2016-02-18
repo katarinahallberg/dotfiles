@@ -216,6 +216,8 @@ set number                  " show line numbers
 set cursorline              " highlight the current line
 set history=200             " remember a lot of stuff
 set ruler                   " Always show info along bottom.
+set wrap                    " Wrap lines
+set linebreak               " Don't break words
 
 
 " Specify listchars with literal unicode in a :set command
