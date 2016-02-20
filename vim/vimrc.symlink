@@ -29,6 +29,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'yegappan/greplace'
+Plug 'vim-airline/vim-airline'
 
 " Syntax plugins
 Plug 'Glench/Vim-Jinja2-Syntax'
@@ -71,11 +72,20 @@ endif
 " Gruvbox
 " ---------------------------------------------------------------------------
 if !has("gui_running")
-   let g:gruvbox_italic=0
+   " let g:gruvbox_italic=0
 endif
 
 colorscheme gruvbox
 set background=dark
+
+
+" Airline
+" ---------------------------------------------------------------------------
+let g:airline_powerline_fonts = 1
+let g:airline_theme='gruvbox'
+let g:Powerline_symbols = 'unicode'
+set laststatus=2
+set linespace=0
 
 
 " CSScomb
