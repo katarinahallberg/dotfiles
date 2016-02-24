@@ -289,7 +289,7 @@ let g:netrw_list_hide= '.*\.DS_Store$'
 let NERDTreeIgnore = ['.DS_Store$']
 
 " Map netrw to Ctrl-E
-map <C-E> :Ex<CR>
+nnoremap <C-E> :Ex<CR>
 
 " Disable netrwhist
 let g:netrw_dirhistmax = 0
