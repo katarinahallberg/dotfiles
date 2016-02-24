@@ -22,7 +22,7 @@
   changed = green
   untracked = cyan
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = ~/.gitignore
   quotepath = false
   autocrlf = input
