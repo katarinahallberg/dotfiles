@@ -25,7 +25,6 @@ brew "htop-osx"
 brew "imagemagick"
 brew "mysql"
 brew "neovim"
-brew "neovim-dot-app", args: ["HEAD"]
 brew "nginx"
 brew "node"
 brew "php56"
