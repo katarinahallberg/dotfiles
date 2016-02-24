@@ -349,6 +349,9 @@ noremap   <Right>  <NOP>
 " Vim tabs
 map <C-t> :tabnew <CR>
 
+" Manually reload file
+map <Leader>r :e!<CR>
+
 " Persistent undo
 set undofile
 set undodir=$HOME/.vim/undo
