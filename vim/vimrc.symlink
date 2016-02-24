@@ -312,6 +312,10 @@ set re=1
 " Default netrw list style
 let g:netrw_liststyle=3
 
+" Hide files form netrw and NERDTree
+let g:netrw_list_hide= '.*\.DS_Store$'
+let NERDTreeIgnore = ['.DS_Store$']
+
 " Map netrw to Ctrl-E
 map <C-E> :Ex<CR>
 
