@@ -43,13 +43,11 @@ Plug 'vim-scripts/nginx.vim'
 
 call plug#end()
 
-
 " General
 " ===========================================================================
 
 " Set leader
 let mapleader = ","
-
 
 " NeoVim only features
 " ===========================================================================
@@ -64,7 +62,6 @@ if has('nvim')
 
 endif
 
-
 " Plugs
 " ===========================================================================
 
@@ -77,7 +74,6 @@ endif
 colorscheme gruvbox
 set background=dark
 
-
 " Airline
 " ---------------------------------------------------------------------------
 let g:airline_powerline_fonts = 1
@@ -85,7 +81,6 @@ let g:airline_theme='gruvbox'
 let g:Powerline_symbols = 'unicode'
 set laststatus=2
 set linespace=0
-
 
 " CSScomb
 " ---------------------------------------------------------------------------
@@ -97,18 +92,15 @@ function! CSScomb()
   redraw!
 endfunction
 
-
 " CtrlP
 " ---------------------------------------------------------------------------
 
 " Don't index files listed in gitignore.
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-
 " Closetag
 " ---------------------------------------------------------------------------
 let g:closetag_filenames = "*.html,*.swig,*.tpl"
-
 
 " NERDTree
 " ---------------------------------------------------------------------------
@@ -118,7 +110,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Show invisible files in NERDTree
 let NERDTreeShowHidden=1
-
 
 " deoplete (Load only in neovim)
 " ---------------------------------------------------------------------------
@@ -172,17 +163,14 @@ if !has('nvim')
 
 endif
 
-
 " delimitMate
 " ---------------------------------------------------------------------------
 let delimitMate_expand_cr = 2
-
 
 " Editorconfig
 " ---------------------------------------------------------------------------
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
-
 
 " GitGutter
 " ---------------------------------------------------------------------------
@@ -190,13 +178,11 @@ let g:gitgutter_sign_removed_first_line = "^_"
 let g:gitgutter_max_signs = 1000
 let g:gitgutter_sign_column_always = 1
 
-
 " Syntastic
 " ---------------------------------------------------------------------------
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_enable_signs = 1
 let g:syntastic_always_populate_loc_list = 1
-
 
 " Vimgrep
 " ---------------------------------------------------------------------------
@@ -204,7 +190,6 @@ let g:syntastic_always_populate_loc_list = 1
 " Quick-jump between results using Shift-Up/Down
 nnoremap <S-Down> :cnext<CR>
 nnoremap <S-Up>   :cprev<CR>
-
 
 " Search
 " ===========================================================================
@@ -217,8 +202,6 @@ set gdefault                " have :s///g flag by default on"
 " Remove search highlight
 nnoremap <silent><esc> :noh<CR>
 
-
-
 " Visual Stuff
 " ===========================================================================
 set number                  " show line numbers
@@ -228,12 +211,9 @@ set ruler                   " Always show info along bottom.
 set wrap                    " Wrap lines
 set linebreak               " Don't break words
 
-
 " Specify listchars with literal unicode in a :set command
 scriptencoding utf-8
 set list lcs=tab:▸\ ,eol:¬,trail:·
-
-
 
 " Code folding
 " ===========================================================================
@@ -243,8 +223,6 @@ set foldlevelstart=99
 
 " Fold by indent level
 set foldmethod=indent
-
-
 
 " Files
 " ===========================================================================
@@ -260,8 +238,6 @@ set updatecount=0
 set nobackup
 set noswapfile
 
-
-
 " Indentation
 " ===========================================================================
 
@@ -272,8 +248,6 @@ set shiftwidth=2            " indent/outdent by 2 columns
 set shiftround              " always indent/outdent to the nearest tabstop
 set expandtab               " use spaces instead of tabs
 set smarttab                " use tabs at the start of a line, spaces elsewherei
-
-
 
 " Syntaxes
 " ===========================================================================
@@ -292,8 +266,6 @@ au BufRead,BufNewFile */nginx/* set filetype=nginx
 
 " JSON
 au BufRead,BufNewFile *csslintrc*,*htmlhintrc*,*eslintrc* set filetype=json
-
-
 
 " Misc
 " ===========================================================================
