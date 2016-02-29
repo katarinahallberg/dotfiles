@@ -324,12 +324,6 @@ map <C-t> :tabnew <CR>
 " Manually reload file
 map <Leader>r :e!<CR>
 
-" Persistent undo
-set undofile
-set undodir=$HOME/.vim/undo
-set undolevels=1000
-set undoreload=10000
-
 " Auto reload changed files (from https://github.com/neovim/neovim/issues/2127#issuecomment-150954047)
 augroup AutoSwap
   autocmd!
