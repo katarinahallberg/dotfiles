@@ -41,6 +41,11 @@ alias c="clear"
 alias x="exit"
 alias grep="grep --color"
 
+# Colorize tree if it’s installed
+if command -v tree >/dev/null 2>&1 ; then
+  alias tree="tree -C"
+fi
+
 # Default to neovim (if installed)
 if command -v nvim >/dev/null 2>&1 ; then
   alias vim="nvim"
