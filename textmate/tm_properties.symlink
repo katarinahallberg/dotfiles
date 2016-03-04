@@ -2,3 +2,4 @@
 excludeDirectories = "{$excludeDirectories,node_modules}"
 includeFiles = "{$includeFiles,.csscomb.json,.editorconfig,.gitignore}"
 includeDirectories = "{$includeDirectories,.git}"
+TM_STRIP_WHITESPACE_ON_SAVE = true
