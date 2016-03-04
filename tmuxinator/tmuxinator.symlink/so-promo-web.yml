@@ -1,0 +1,9 @@
+name: so-promo-web
+root: ~/Sites/so-promo-web
+
+windows:
+  - so-promo-web:
+      layout: 3b91,178x50,0,0{110x50,0,0,5,67x50,111,0,7}
+      panes:
+        - c
+        - c && npm start
