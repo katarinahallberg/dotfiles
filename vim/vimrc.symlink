@@ -99,7 +99,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 " Closetag
 " ---------------------------------------------------------------------------
-let g:closetag_filenames = "*.html,*.swig,*.tpl"
+let g:closetag_filenames = "*.html,*.tpl"
 
 " NERDTree
 " ---------------------------------------------------------------------------
@@ -249,12 +249,6 @@ set smarttab                " use tabs at the start of a line, spaces elsewherei
 
 " Syntaxes
 " ===========================================================================
-
-" swigjs (using jinja)
-au BufRead,BufNewFile *.swig set filetype=jinja
-
-" stylus (using SCSS syntax)
-au BufRead,BufNewFile *.styl set filetype=scss
 
 " git (symlinked)
 au BufRead,BufNewFile gitconfig.symlink,gitignore.symlink setfiletype gitconfig
