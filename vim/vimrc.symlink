@@ -81,16 +81,6 @@ let g:Powerline_symbols = 'unicode'
 set laststatus=2
 set linespace=0
 
-" CSScomb
-" ---------------------------------------------------------------------------
-
-" Use npm installed CSScomb
-autocmd FileType css nnoremap <buffer> <Leader>c :call CSScomb()<CR>
-function! CSScomb()
-  execute "silent !csscomb " . expand('%')
-  redraw!
-endfunction
-
 " CtrlP
 " ---------------------------------------------------------------------------
 
