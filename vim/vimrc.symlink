@@ -158,7 +158,7 @@ let delimitMate_expand_cr = 2
 
 " Editorconfig
 " ---------------------------------------------------------------------------
-autocmd BufReadPre,FileReadPre * :EditorConfig
+" autocmd BufReadPost,FileReadPost * EditorConfig
 
 " GitGutter
 " ---------------------------------------------------------------------------
