@@ -197,8 +197,8 @@ set ignorecase              " make searches case-insensitive...
 set smartcase               " ... unless they contain at least one capital letter
 set gdefault                " have :s///g flag by default on"
 
-" Remove search highlight
-nnoremap <C-h> :noh<CR>
+" Remove search highlight with Ctrl-L
+nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 
 " Visual Stuff
 " ===========================================================================
@@ -239,13 +239,14 @@ set noswapfile
 " Indentation
 " ===========================================================================
 
-set autoindent              " auto-indent
-set tabstop=2               " tab spacing
-set softtabstop=2           " unify
-set shiftwidth=2            " indent/outdent by 2 columns
-set noshiftround            " don’t indent/outdent to the nearest tabstop
-set expandtab               " use spaces instead of tabs
-set smarttab                " use tabs at the start of a line, spaces elsewherei
+set autoindent                 " auto-indent
+set tabstop=2                  " tab spacing
+set softtabstop=2              " unify
+set shiftwidth=2               " indent/outdent by 2 columns
+set noshiftround               " don’t indent/outdent to the nearest tabstop
+set expandtab                  " use spaces instead of tabs
+set smarttab                   " use tabs at the start of a line, spaces elsewhere
+set backspace=indent,eol,start " Backspace through anything in insert mode
 
 " Syntaxes
 " ===========================================================================
