@@ -23,6 +23,7 @@ PACKAGES=(
   "nodemon"
   "npm-check-updates"
   "nvm"
+  "svgo"
 )
 
 echo ""
