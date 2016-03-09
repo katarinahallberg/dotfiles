@@ -73,14 +73,6 @@ endif
 colorscheme gruvbox
 set background=dark
 
-" Airline
-" ---------------------------------------------------------------------------
-let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
-let g:Powerline_symbols = 'unicode'
-set laststatus=2
-set linespace=0
-
 " CtrlP
 " ---------------------------------------------------------------------------
 
