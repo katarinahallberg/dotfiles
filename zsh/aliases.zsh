@@ -1,4 +1,4 @@
-# Darwin only aliases
+# Darwin specific aliases
 #
 if [[ "$(uname -s)" == "Darwin" ]] ; then
 
@@ -7,14 +7,9 @@ if [[ "$(uname -s)" == "Darwin" ]] ; then
   alias l="ls -GF"
   alias df="gdf -H"
 
-  # Colored cat
-  if command -v ccat >/dev/null 2>&1 ; then
-    alias cat="ccat"
-  fi
-
 fi
 
-# Linux only aliases
+# Linux specific aliases
 #
 if [[ "$(uname -s)" == "Linux" ]] ; then
 
@@ -38,6 +33,11 @@ alias grep="grep --color"
 # Colorize tree if it’s installed
 if command -v tree >/dev/null 2>&1 ; then
   alias tree="tree -C"
+fi
+
+# Colored cat
+if command -v ccat >/dev/null 2>&1 ; then
+  alias cat="ccat"
 fi
 
 # Nice looking time stamp
