@@ -7,6 +7,9 @@
 # direnv file
 .envrc
 
+# node files
+npm-debug.log
+
 # TextMate config file
 .tm_properties
 
