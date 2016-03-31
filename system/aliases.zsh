@@ -5,7 +5,11 @@ if [[ "$(uname -s)" == "Darwin" ]] ; then
   # System utils
   alias ls="ls -GF"
   alias l="ls -GF"
-  alias df="gdf -H"
+  if command -v gdf >/dev/null 2>&1 ; then
+    alias df="gdf -H"
+  else
+    alias df="df -h"
+  fi
 
 fi
 
