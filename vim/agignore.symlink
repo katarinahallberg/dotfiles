@@ -1,0 +1,4 @@
+# Ignore file for the Silver Searcher (ag)
+node_modules
+dist
+target
