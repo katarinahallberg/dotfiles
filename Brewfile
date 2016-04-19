@@ -20,6 +20,7 @@ brew "editorconfig"
 brew "gem-completion", args: ["HEAD"]
 brew "git"
 brew "gotty"
+brew "grc"
 brew "htop-osx"
 brew "imagemagick"
 brew "mysql"
