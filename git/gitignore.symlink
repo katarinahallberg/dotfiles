@@ -17,8 +17,9 @@ npm-debug.log
 ._*
 Thumbs.db
 
-# Vim session config
+# Vim files
 .vimsession
+.agignore
 
 # Icon must end with two \r
 Icon
