@@ -1,4 +1,4 @@
-#!/usr/local/bin/zsh -i
+#!/bin/zsh -i
 
 if [ ${#} -ne 2 ]; then
   echo >&2 Usage: $(basename ${0}) old-version new-version
