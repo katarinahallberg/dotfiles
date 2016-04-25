@@ -5,7 +5,7 @@
 set -e
 
 # Version to install with rbenv
-RUBY_VERSION="2.2.2"
+RUBY_VERSION="2.3.0"
 
 # Gems to install
 GEMS=(
