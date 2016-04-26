@@ -3,8 +3,7 @@ root: ~/Sites/frippz.se/
 
 windows:
   - frippz.se:
-      layout: 3141,178x50,0,0{118x50,0,0,15,59x50,119,0[59x25,119,0,16,59x24,119,26,18]}
+      layout: 35d3,178x47,0,0{127x47,0,0,0,50x47,128,0,1}
       panes:
         - c
-        - c && bundle exec jekyll s --drafts
-        - c && gulp
+        - c && npm start
