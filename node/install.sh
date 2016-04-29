@@ -13,7 +13,7 @@ if [ ! -d $HOME/.nodenv/bin ] ; then
   echo ""
   echo "  • Reloading environment"
   echo ""
-  . ~/.zshrc
+  export PATH=$HOME/.nodenv/shims:$PATH
   echo ""
   echo "  Installing node-build plugin"
   echo ""
