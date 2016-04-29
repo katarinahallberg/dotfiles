@@ -17,11 +17,11 @@ if [ ! -d $HOME/.nodenv/bin ] ; then
   echo ""
   echo "  Installing node-build plugin"
   echo ""
-  git clone https://github.com/nodenv/node-build.git $(nodenv root)/plugins/node-build
+  git clone https://github.com/nodenv/node-build.git $HOME/.nodenv/plugins/node-build
   echo ""
   echo "  Installing nodenv-update plugin"
   echo ""
-  git clone https://github.com/nodenv/nodenv-update.git "$(nodenv root)"/plugins/nodenv-update
+  git clone https://github.com/nodenv/nodenv-update.git $HOME/.nodenv/plugins/nodenv-update
 else
   echo ""
   echo "  √ Looks like nodenv is installed. Awesome!"
