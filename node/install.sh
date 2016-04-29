@@ -56,7 +56,6 @@ PACKAGES=(
   "localtunnel"
   "nodemon"
   "npm-check-updates"
-  "nvm"
   "svgo"
 )
 
@@ -64,18 +63,16 @@ echo "  √ Running Node install script"
 echo ""
 
 # Check for npm if we’re on OS X
-if [[ "$(uname -s)" == "Darwin" ]] ; then
-  if command -v npm >/dev/null 2>&1 ; then
-    echo "  √ Looks like npm is installed. Checking for packages to install."
-    # Install npm packages globally
-    for PACKAGE in ${PACKAGES[@]} ; do
-      if ! echo ${INSTALLED_PACKAGES[@]} | grep -q "${PACKAGE}" ; then
-        npm install -g $PACKAGE
-      fi
-    done
-  else
-    echo "  ✗ npm is not installed. Skipping..."
-  fi
+if command -v npm >/dev/null 2>&1 ; then
+  echo "  √ Looks like npm is installed. Checking for packages to install."
+  # Install npm packages globally
+  for PACKAGE in ${PACKAGES[@]} ; do
+    if ! echo ${INSTALLED_PACKAGES[@]} | grep -q "${PACKAGE}" ; then
+      npm install -g $PACKAGE
+    fi
+  done
+else
+  echo "  ✗ npm is not installed. Skipping..."
 fi
 
 exit 0
