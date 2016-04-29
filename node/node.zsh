@@ -5,6 +5,8 @@ elif [[ "$(uname -s)" == "Linux" ]] ; then
   export NODE_PATH="/usr/bin/node"
 fi
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# nodenv
+if [ -d $HOME/.nodenv/bin ] ; then
+  export PATH="$HOME/.nodenv/bin:$PATH"
+  eval "$(nodenv init -)"
+fi
