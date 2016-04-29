@@ -4,24 +4,34 @@
 
 set -e
 
+NODE_VERSION="5.11.0"
+
 # Check for nodenv and install if it’s not installed
 if [ ! -d $HOME/.nodenv/bin ] ; then
   echo ""
-  echo "  ✗ nodenv not found. Imma install that shit for you!"
+  echo "  √ nodenv not found. Installing now..."
   echo ""
   git clone https://github.com/nodenv/nodenv.git $HOME/.nodenv
   echo ""
-  echo "  • Reloading environment"
+  echo "  √ Reloading environment"
   echo ""
-  export PATH=$HOME/.nodenv/shims:$PATH
+  export PATH=$HOME/.nodenv/bin:$PATH
+  eval "$(nodenv init -)"
   echo ""
-  echo "  Installing node-build plugin"
+  echo "  √ Installing node-build plugin..."
   echo ""
   git clone https://github.com/nodenv/node-build.git $HOME/.nodenv/plugins/node-build
   echo ""
-  echo "  Installing nodenv-update plugin"
+  echo "  √ Installing nodenv-update plugin..."
   echo ""
+  nodenv install $NODE_VERSION
+  echo ""
+  echo "  √ Setting global Node version to $NODE_VERSION"
+  echo ""
+  nodenv global $NODE_VERSION
   git clone https://github.com/nodenv/nodenv-update.git $HOME/.nodenv/plugins/nodenv-update
+  echo ""
+  echo "  √ Installing node version $NODE_VERSION..."
 else
   echo ""
   echo "  √ Looks like nodenv is installed. Awesome!"
