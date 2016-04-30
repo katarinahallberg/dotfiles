@@ -24,14 +24,21 @@ if [ ! -d $HOME/.nodenv/bin ] ; then
   echo ""
   echo "  √ Installing nodenv-update plugin..."
   echo ""
+  git clone https://github.com/nodenv/nodenv-update.git $HOME/.nodenv/plugins/nodenv-update
+  echo ""
+  echo "  √ Attempting to compile dynamic extensions..."
+  echo ""
+  set +e
+  cd $HOME/.nodenv && src/configure && make -C src
+  set -e
+  echo ""
+  echo "  √ Installing node version $NODE_VERSION..."
+  echo ""
   nodenv install $NODE_VERSION
   echo ""
   echo "  √ Setting global Node version to $NODE_VERSION"
   echo ""
   nodenv global $NODE_VERSION
-  git clone https://github.com/nodenv/nodenv-update.git $HOME/.nodenv/plugins/nodenv-update
-  echo ""
-  echo "  √ Installing node version $NODE_VERSION..."
 else
   echo ""
   echo "  √ Looks like nodenv is installed. Awesome!"
