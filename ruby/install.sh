@@ -20,7 +20,7 @@ echo "  √ Running Ruby install script"
 echo ""
 
 if ! command -v rbenv >/dev/null 2>&1 ; then
-  if [[ "$(uname -s)" == "Darwin" ]] ; then
+  if [[ "$(uname -s)" == "Darwin" ]] && command -v brew >/dev/null 2>&1 ; then
     echo "  √ Installing rbenv for you."
     brew install rbenv > /tmp/rbenv-install.log
   fi
