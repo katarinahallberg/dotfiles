@@ -19,7 +19,7 @@ echo ""
 echo "  √ Running Ruby install script"
 echo ""
 
-if ! command -v rbenv >/dev/null 2>&1 ; then
+if ! command -v rbenv >/dev/null 2>&1 && [ ! -d $HOME/.rbenv ]; then
   echo ""
   echo "  √ Installing rbenv..."
   echo ""
