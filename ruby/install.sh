@@ -20,18 +20,19 @@ echo "  √ Running Ruby install script"
 echo ""
 
 if ! command -v rbenv >/dev/null 2>&1 ; then
-  if [[ "$(uname -s)" == "Darwin" ]] && command -v brew >/dev/null 2>&1 ; then
-    echo "  √ Installing rbenv for you."
-    brew install rbenv > /tmp/rbenv-install.log
-  fi
-fi
-
-if ! command -v ruby-build >/dev/null 2>&1 ; then
-  if [[ "$(uname -s)" == "Darwin" ]] ; then
-    echo "  √ Installing ruby-build and rbenv-gem-rehash for you."
-    brew install ruby-build > /tmp/ruby-build-install.log
-    brew install rbenv-gem-rehash > /tmp/rbenv-gem-rehash-install.log
-  fi
+  echo ""
+  echo "  √ Installing rbenv..."
+  echo ""
+  git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
+  cd $HOME/.rbenv && src/configure && make -C src
+  echo ""
+  echo "  √ Installing ruby-build..."
+  echo ""
+  git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build
+  echo ""
+  echo "√ Reloading environment"
+  echo ""
+  eval "$(rbenv init -)"
 fi
 
 # Check for rbenv before attempting to install gems
