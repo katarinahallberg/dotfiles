@@ -32,6 +32,7 @@ if ! command -v rbenv >/dev/null 2>&1 && [ ! -d $HOME/.rbenv ]; then
   echo ""
   echo "√ Reloading environment"
   echo ""
+  export PATH=$HOME/.rbenv/bin:$PATH
   eval "$(rbenv init -)"
 fi
 
