@@ -1,3 +1,5 @@
+#compdef tmuxinator mux
+
 _tmuxinator() {
   local commands projects
   commands=(${(f)"$(tmuxinator commands zsh)"})
@@ -17,7 +19,7 @@ _tmuxinator() {
   return
 }
 
-compdef _tmuxinator tmuxinator mux
+_tmuxinator
 
 # Local Variables:
 # mode: Shell-Script
