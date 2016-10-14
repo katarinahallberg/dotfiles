@@ -4,7 +4,7 @@
 
 set -e
 
-NODE_VERSION="5.11.0"
+NODE_VERSION="4.6.0"
 
 # Check for nodenv and install if it’s not installed
 if [ ! -d $HOME/.nodenv/bin ] ; then
