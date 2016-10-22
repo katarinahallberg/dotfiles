@@ -10,6 +10,7 @@ if [[ "$(uname -s)" == "Darwin" ]] ; then
   else
     alias df="df -Ph"
   fi
+  alias ic="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 fi
 
