@@ -2,25 +2,29 @@
 #
 # Setup required taps and install Homebrew packages using Brewfile
 
-if ! command -v brew >/dev/null 2>&1 ; then
+if [[ "$(uname -s)" == "Darwin" ]] ; then
 
-  echo ""
-  echo " √ Installing Homebrew"
-  echo ""
+  if ! command -v brew >/dev/null 2>&1 ; then
 
-  HOMEBREW_PREFIX="/usr/local"
+    echo ""
+    echo " √ Installing Homebrew"
+    echo ""
 
-  if [ -d "$HOMEBREW_PREFIX" ]; then
-    if ! [ -r "$HOMEBREW_PREFIX" ]; then
-      sudo chown -R "$LOGNAME:admin" /usr/local
+    HOMEBREW_PREFIX="/usr/local"
+
+    if [ -d "$HOMEBREW_PREFIX" ]; then
+      if ! [ -r "$HOMEBREW_PREFIX" ]; then
+        sudo chown -R "$LOGNAME:admin" /usr/local
+      fi
+    else
+      sudo mkdir "$HOMEBREW_PREFIX"
+      sudo chflags norestricted "$HOMEBREW_PREFIX"
+      sudo chown -R "$LOGNAME:admin" "$HOMEBREW_PREFIX"
     fi
-  else
-    sudo mkdir "$HOMEBREW_PREFIX"
-    sudo chflags norestricted "$HOMEBREW_PREFIX"
-    sudo chown -R "$LOGNAME:admin" "$HOMEBREW_PREFIX"
-  fi
 
-  curl -fsS 'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
+    curl -fsS 'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
+
+  fi
 
 fi
 
