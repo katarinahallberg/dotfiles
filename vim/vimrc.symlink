@@ -6,7 +6,7 @@ call plug#begin('~/.vim/plugged')
 " Regular plugins
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
-Plug 'dahu/EditorConfig'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'godlygeek/tabular'
 Plug 'gregsexton/MatchTag'
 Plug 'groenewege/vim-less'
@@ -155,7 +155,7 @@ let delimitMate_expand_cr = 2
 
 " Editorconfig
 " ---------------------------------------------------------------------------
-" autocmd BufReadPost,FileReadPost * EditorConfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " GitGutter
 " ---------------------------------------------------------------------------
