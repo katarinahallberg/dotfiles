@@ -12,6 +12,7 @@ GEMS=(
   "bundler"
   "jekyll"
   "jekyll-paginate"
+  "neovim"
   "tmuxinator"
 )
 
