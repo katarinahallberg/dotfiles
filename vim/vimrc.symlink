@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 " Regular plugins
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
+Plug 'csscomb/vim-csscomb'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'godlygeek/tabular'
 Plug 'gregsexton/MatchTag'
@@ -19,8 +20,8 @@ Plug 'raimondi/delimitMate'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
-Plug 'shougo/neocomplete.vim'
 Plug 'shougo/deoplete.nvim'
+Plug 'shougo/neocomplete.vim'
 Plug 'tmhedberg/matchit'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
