@@ -34,6 +34,7 @@ Plug 'yegappan/greplace'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'hail2u/vim-css3-syntax'
+Plug 'keith/swift.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown'}
 Plug 'rosstimson/modx.vim'
