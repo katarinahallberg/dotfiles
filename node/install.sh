@@ -63,6 +63,7 @@ PACKAGES=(
   "localtunnel"
   "nodemon"
   "npm-check-updates"
+  "stylelint"
   "svgo"
 )
 
