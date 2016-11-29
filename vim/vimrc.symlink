@@ -16,10 +16,10 @@ Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nelstrom/vim-qargs'
+Plug 'neomake/neomake'
 Plug 'raimondi/delimitMate'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'scrooloose/syntastic'
 Plug 'shougo/deoplete.nvim'
 Plug 'shougo/neocomplete.vim'
 Plug 'tmhedberg/matchit'
@@ -166,27 +166,14 @@ let g:gitgutter_sign_removed_first_line = "^_"
 let g:gitgutter_max_signs = 1000
 let g:gitgutter_sign_column_always = 1
 
-" Syntastic
+" Neomake
 " ---------------------------------------------------------------------------
-let g:syntastic_enable_signs = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_aggregate_errors = 1
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_css_enabled_makers = ['stylelint']
+let g:neomake_swift_enabled_makers = ['swiftpm', 'swiftlint']
 
-" Syntax checkers
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
-let g:syntastic_css_checkers = ['stylelint']
-
-" Find config files in project root
-function! FindConfig(prefix, what, where)
-  let cfg = findfile(a:what, escape(a:where, ' ') . ';')
-  return cfg !=# '' ? ' ' . a:prefix . ' ' . shellescape(cfg) : ''
-endfunction
-
-" Find .stylelintrc
-autocmd FileType css let b:syntastic_css_stylelint_args =
-      \ get(g:, 'syntastic_css_stylelint_args', '') .
-      \ FindConfig('-c', '.stylelintrc', expand('<afile>:p:h', 1))
+" Run NeoMake on file write
+autocmd! BufWritePost * Neomake
 
 " Vimgrep
 " ---------------------------------------------------------------------------
