@@ -27,6 +27,13 @@ fail () {
   exit
 }
 
+setup_shell () {
+  if ! [ -n "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
+    echo "These dotfiles require ZSH. Run chsh -s $(which zsh) to change."
+    exit 1
+  fi
+}
+
 setup_gitconfig () {
   if ! [ -f git/gitconfig.symlink ] ; then
     info 'setup gitconfig'
@@ -128,6 +135,7 @@ install_dotfiles () {
   done
 }
 
+setup_shell
 setup_gitconfig
 install_dotfiles
 
