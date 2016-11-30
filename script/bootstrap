@@ -30,6 +30,7 @@ fail () {
 setup_shell () {
   if ! [ -n "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
     echo "These dotfiles require ZSH. Run chsh -s $(which zsh) to change."
+    echo ""
     exit 1
   fi
 }
