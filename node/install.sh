@@ -6,6 +6,23 @@ set -e
 
 NODE_VERSION="4.6.0"
 
+# Packages to install globally
+PACKAGES=(
+  "autoprefixer"
+  "bower"
+  "csscomb"
+  "eslint"
+  "grunt"
+  "gulp"
+  "http-server"
+  "live-server"
+  "localtunnel"
+  "nodemon"
+  "npm-check-updates"
+  "stylelint"
+  "svgo"
+)
+
 # Check for nodenv and install if it’s not installed
 if [ ! -d $HOME/.nodenv/bin ] ; then
   echo ""
@@ -49,23 +66,6 @@ fi
 if command -v npm >/dev/null 2>&1 ; then
   INSTALLED_PACKAGES=( $(find `npm root -g` -type d -maxdepth 1 -not -path '*/\.*' -print0 | while IFS= read -r -d '' dirname; do echo ${dirname##*/}; done) )
 fi
-
-# Packages to install globally
-PACKAGES=(
-  "autoprefixer"
-  "bower"
-  "csscomb"
-  "eslint"
-  "grunt"
-  "gulp"
-  "http-server"
-  "live-server"
-  "localtunnel"
-  "nodemon"
-  "npm-check-updates"
-  "stylelint"
-  "svgo"
-)
 
 echo "  √ Running Node install script"
 echo ""
