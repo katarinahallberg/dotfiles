@@ -29,6 +29,7 @@ brew "nginx"
 brew "php56"
 brew "php56-mcrypt"
 brew "python"
+brew "python3"
 brew "ruby-completion", args: ["HEAD"]
 brew "the_silver_searcher"
 brew "tidy-html5"
