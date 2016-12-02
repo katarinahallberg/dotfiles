@@ -33,7 +33,7 @@ brew "python3"
 brew "ruby-completion", args: ["HEAD"]
 brew "the_silver_searcher"
 brew "tidy-html5"
-brew "tmux"
+brew "tmux", args: ["HEAD"]
 brew "tree"
 brew "unrar"
 brew "unzip"
