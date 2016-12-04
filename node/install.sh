@@ -21,6 +21,7 @@ PACKAGES=(
   "npm-check-updates"
   "stylelint"
   "svgo"
+  "yarn"
 )
 
 # Check for nodenv and install if it’s not installed
