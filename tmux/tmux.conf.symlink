@@ -7,8 +7,8 @@
 set -g default-terminal "screen-256color"
 
 # Fix broken clipboard in Sierra
-# set -g default-shell $SHELL
-# set -g default-command "reattach-to-user-namespace -l ${SHELL}"
+set -g default-shell $SHELL
+set -g default-command "reattach-to-user-namespace -l ${SHELL}"
 
 # Reset base index to 1
 set -g base-index 1
