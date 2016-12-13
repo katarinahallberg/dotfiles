@@ -4,10 +4,10 @@ I don't think it's a good idea for you to fork this. I'm very special. 😉
 
 ## Usage
 
-Make sure you're running `zsh` first, since most of my dotfiles assumes this.
+Make sure you're running `zsh` first (which means that it also needs to be installed, yes), since most of my dotfiles assumes this.
 
 ```zsh
-$ chsh -s /bin/zsh
+$ chsh -s $(which zsh)
 ```
 
 We're ready to bootstrap!
