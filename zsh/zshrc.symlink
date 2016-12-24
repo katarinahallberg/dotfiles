@@ -28,8 +28,14 @@ do
 done
 
 # Autocomplete
-autoload -U compinit
-compinit
+# autoload -U compinit
+# compinit
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
