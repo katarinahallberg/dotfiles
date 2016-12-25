@@ -28,8 +28,6 @@ do
 done
 
 # Autocomplete
-# autoload -U compinit
-# compinit
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
   compinit
