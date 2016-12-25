@@ -1,9 +1,12 @@
 # Node environment config
-if [[ "$(uname -s)" == "Darwin" ]] ; then
-  export NODE_PATH="/usr/local/lib/node"
-elif [[ "$(uname -s)" == "Linux" ]] ; then
-  export NODE_PATH="/usr/bin/node"
-fi
+case "$OSTYPE" in
+  *darwin*)
+    export NODE_PATH="/usr/local/lib/node"
+    ;;
+  *linux*)
+    export NODE_PATH="/usr/bin/node"
+    ;;
+esac
 
 # nodenv
 if [ -d $HOME/.nodenv/bin ] ; then

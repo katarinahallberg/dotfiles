@@ -1,29 +1,27 @@
-# Darwin specific aliases
+# OS specific aliases
 #
-if [[ "$(uname -s)" == "Darwin" ]] ; then
 
-  # System utils
-  alias ls="ls -GF"
-  alias l="ls -GF"
-  if command -v gdf >/dev/null 2>&1 ; then
-    alias df="gdf -PH"
-  else
-    alias df="df -Ph"
-  fi
-  alias ic="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
+case "$OSTYPE" in
+  *darwin*)
+    # System utils
+    alias ls="ls -GF"
+    alias l="ls -GF"
+    if command -v gdf >/dev/null 2>&1 ; then
+      alias df="gdf -PH"
+    else
+      alias df="df -Ph"
+    fi
+    alias ic="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
+    ;;
 
-fi
+  *linux*)
+    # System utils
+    alias ls="ls --color -F"
+    alias l="ls --color -F"
+    alias df="df -H"
+    ;;
+esac
 
-# Linux specific aliases
-#
-if [[ "$(uname -s)" == "Linux" ]] ; then
-
-  # System utils
-  alias ls="ls --color -F"
-  alias l="ls --color -F"
-  alias df="df -H"
-
-fi
 
 # General aliases
 #
@@ -49,4 +47,4 @@ fi
 alias tstamp="date +%Y%m%d%H%M"
 
 # zsh
-alias reload!=". ~/.zshrc"
+alias zreload!=". ~/.zshrc"
