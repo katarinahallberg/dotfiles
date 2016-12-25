@@ -47,4 +47,4 @@ fi
 alias tstamp="date +%Y%m%d%H%M"
 
 # zsh
-alias zreload!=". ~/.zshrc"
+alias reload!=". ~/.zshrc"
