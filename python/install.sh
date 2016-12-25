@@ -15,7 +15,14 @@ if command -v pip3 >/dev/null 2>&1 ; then
   echo ""
   echo " √ Upgrading pip3"
   echo ""
-  pip3 install --upgrade pip
+  case "$OSTYPE" in
+    *darwin*)
+      pip3 install --upgrade pip
+      ;;
+    *linux*)
+      sudo -H pip3 install --upgrade pip
+      ;;
+  esac
   for PIP in ${PIPS[@]} ; do
     pip3 install -U $PIP
   done
@@ -34,7 +41,14 @@ if command -v pip2 >/dev/null 2>&1 ; then
   echo ""
   echo " √ Upgrading pip2"
   echo ""
-  pip2 install --upgrade pip
+  case "$OSTYPE" in
+    *darwin*)
+      pip2 install --upgrade pip
+      ;;
+    *linux*)
+      sudo -H pip2 install --upgrade pip
+      ;;
+  esac
   for PIP in ${PIPS[@]} ; do
     pip2 install -U $PIP
   done
