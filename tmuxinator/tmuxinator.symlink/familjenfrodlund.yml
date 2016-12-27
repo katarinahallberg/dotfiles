@@ -6,4 +6,4 @@ windows:
       layout: 7124,178x50,0,0{116x50,0,0,0,61x50,117,0,1}
       panes:
         - c
-        - c && nvm exec npm start
+        - c && npm start
