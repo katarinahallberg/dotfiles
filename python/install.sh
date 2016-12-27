@@ -24,7 +24,15 @@ if command -v pip3 >/dev/null 2>&1 ; then
       ;;
   esac
   for PIP in ${PIPS[@]} ; do
-    pip3 install -U $PIP
+    case "$OSTYPE" in
+      *darwin*)
+        PREFIX=""
+        ;;
+      *linux*)
+        PREFIX="sudo -H "
+        ;;
+    esac
+    $PREFIX pip3 install -U $PIP
   done
 else
   echo ""
@@ -50,7 +58,15 @@ if command -v pip2 >/dev/null 2>&1 ; then
       ;;
   esac
   for PIP in ${PIPS[@]} ; do
-    pip2 install -U $PIP
+    case "$OSTYPE" in
+      *darwin*)
+        PREFIX=""
+        ;;
+      *linux*)
+        PREFIX="sudo -H "
+        ;;
+    esac
+    $PREFIX pip2 install -U $PIP
   done
 else
   echo ""
