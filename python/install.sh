@@ -36,7 +36,7 @@ if command -v pip3 >/dev/null 2>&1 ; then
   done
 else
   echo ""
-  echo " ✗ pip3 not found. You may need to install python3 first."
+  echo " ✗ pip3 not found. You may need to install python3 first and/or install pip3."
   echo ""
 fi
 
@@ -70,6 +70,6 @@ if command -v pip2 >/dev/null 2>&1 ; then
   done
 else
   echo ""
-  echo " ✗ pip2 not found. You may need to install python-2.7 first."
+  echo " ✗ pip2 not found. You may need to install python-2.7 first and/or install pip2."
   echo ""
 fi
