@@ -1,4 +1,5 @@
-# Yarn package manager
-if [ -d $HOME/.yarn/bin ] ; then
-  export PATH="$HOME/.yarn/bin:$PATH"
+# Add Yarn binaries globally
+
+if command -v yarn >/dev/null 2>&1 ; then
+  export PATH="$PATH:`yarn global bin`"
 fi

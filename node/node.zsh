@@ -1,12 +1,6 @@
 # Node environment config
-case "$OSTYPE" in
-  *darwin*)
-    export NODE_PATH="/usr/local/lib/node"
-    ;;
-  *linux*)
-    export NODE_PATH="/usr/bin/node"
-    ;;
-esac
+export NODE_PATH=$HOME/.npm/lib/node_modules
+export PATH=$PATH:$HOME/.npm/bin
 
 # nodenv
 if [ -d $HOME/.nodenv/bin ] ; then

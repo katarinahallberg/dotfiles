@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 #
-# Node package manager (NPM)
 
-set -e
-
-NODE_VERSION="4.6.0"
-
-# Packages to install globally
+# Packages to install globally with npm
 PACKAGES=(
   "autoprefixer"
   "bower"
@@ -21,8 +16,9 @@ PACKAGES=(
   "npm-check-updates"
   "stylelint"
   "svgo"
-  "yarn"
 )
+
+set -e
 
 # Check for nodenv and install if it’s not installed
 if [ ! -d $HOME/.nodenv/bin ] ; then
@@ -49,17 +45,9 @@ if [ ! -d $HOME/.nodenv/bin ] ; then
   set +e
   cd $HOME/.nodenv && src/configure && make -C src
   set -e
-  echo ""
-  echo "  √ Installing node version $NODE_VERSION..."
-  echo ""
-  nodenv install $NODE_VERSION
-  echo ""
-  echo "  √ Setting global Node version to $NODE_VERSION"
-  echo ""
-  nodenv global $NODE_VERSION
 else
   echo ""
-  echo "  √ Looks like nodenv is installed. Awesome!"
+  echo "  √ Looks like nodenv is already installed. Awesome!"
   echo ""
 fi
 
@@ -74,7 +62,7 @@ echo ""
 # Check for npm if we’re on OS X
 if command -v npm >/dev/null 2>&1 ; then
   echo "  √ Looks like npm is installed. Checking for packages to install."
-  # Install npm packages globally
+  # Install packages globally
   for PACKAGE in ${PACKAGES[@]} ; do
     if ! echo ${INSTALLED_PACKAGES[@]} | grep -q "${PACKAGE}" ; then
       npm install -g $PACKAGE
@@ -83,5 +71,3 @@ if command -v npm >/dev/null 2>&1 ; then
 else
   echo "  ✗ npm is not installed. Skipping..."
 fi
-
-exit 0
