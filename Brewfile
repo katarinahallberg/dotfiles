@@ -38,8 +38,8 @@ brew "tmux", args: ["HEAD"]
 brew "tree"
 brew "unrar"
 brew "unzip"
-brew "vim", args: ["--with-lua", "--without-python", "--with-python3"]
 brew "wget"
+brew "yarn"
 brew "youtube-dl"
 brew "zsh"
 brew "zsh-syntax-highlighting"
