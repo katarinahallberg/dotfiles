@@ -1,9 +1,0 @@
-name: so-floorplan-web
-root: ~/Sites/so-floorplan-web/
-
-windows:
-  - so-floorplan-web:
-      layout: 839c,178x50,0,0{118x50,0,0,0,59x50,119,0,1}
-      panes:
-        - c
-        - c && npm start

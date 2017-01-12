@@ -1,5 +1,6 @@
 name: familjenfrodlund
 root: ~/Sites/familjenfrodlund.se/
+pre_window: eval "$(nodenv init -)"
 
 windows:
   - familjenfrodlund.se:
