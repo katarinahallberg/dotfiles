@@ -7,6 +7,7 @@ PACKAGES=(
   "bower"
   "csscomb"
   "eslint"
+  "htmlhint"
   "grunt"
   "gulp"
   "http-server"
