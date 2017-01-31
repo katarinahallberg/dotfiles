@@ -34,7 +34,7 @@ brew "reattach-to-user-namespace"
 brew "ruby-completion", args: ["HEAD"]
 brew "the_silver_searcher"
 brew "tidy-html5"
-brew "tmux", args: ["HEAD"]
+brew "tmux",
 brew "tree"
 brew "unrar"
 brew "unzip"
