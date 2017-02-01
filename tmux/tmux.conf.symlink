@@ -2,8 +2,6 @@
 #
 
 # General settings
-# set -g utf8
-# set-window-option -g utf8 on
 set -g default-terminal "screen-256color"
 
 # Fix broken clipboard in Sierra
@@ -39,8 +37,6 @@ bind k select-pane -U
 bind l select-pane -R
 bind-key -r C-h select-window -t :-
 bind-key -r C-l select-window -t :+
-# bind-key -t vi-copy 'v' begin-selection
-# bind-key -t vi-copy 'y' copy-selection
 
 # Other key bindings
 bind k confirm kill-window
