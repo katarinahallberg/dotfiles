@@ -4,6 +4,9 @@
 
 set -e
 
+# Skip rdoc install
+export RUBY_CONFIGURE_OPTS=--disable-install-doc
+
 # Version to install with rbenv
 RUBY_VERSION="2.3.0"
 
