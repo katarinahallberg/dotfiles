@@ -32,6 +32,7 @@ brew "python"
 brew "python3"
 brew "reattach-to-user-namespace"
 brew "ruby-completion", args: ["HEAD"]
+brew "s3cmd"
 brew "the_silver_searcher"
 brew "tidy-html5"
 brew "tmux"
