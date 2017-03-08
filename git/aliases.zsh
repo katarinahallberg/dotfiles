@@ -11,7 +11,6 @@ alias gl='git pull'
 alias gp='git push'
 alias gcp='git cherry-pick'
 alias gr='git remote'
-alias co='checkout'
 
 # Add
 alias ga='git add'
@@ -20,17 +19,17 @@ alias gap='git add --patch'
 
 # Branch
 alias gb='git branch'
+alias gbr='git branch'
 alias gba='git branch -a'
-alias gbr='git branch --remote'
+#alias gbr='git branch --remote'
 alias gc!='git commit -v --amend'
-alias br='branch'
 
 # Commit
 alias gc='git commit -v'
+alias gci='git commit'
 alias gca!='git commit -v -a --amend'
 alias gca='git commit -v -a'
 alias gcmsg='git commit -m'
-alias ci='commit'
 
 # Rebase
 alias grb='git rebase'
@@ -40,11 +39,9 @@ alias grbi='git rebase -i'
 
 # Diff
 alias gd='git diff'
-alias gd='git diff'
 alias gdc='git diff --cached'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdt='git difftool'
-alias di='diff'
 
 # Stashing
 alias gsta='git stash'
@@ -55,7 +52,6 @@ alias gsts='git stash show --text'
 # Status
 alias gst='git status'
 alias gss='git status -s'
-alias st='status'
 
 # Log
 alias glg='git log --stat --max-count=10'
@@ -65,8 +61,8 @@ alias glo='git log --oneline --decorate --color'
 alias glog='git log --oneline --decorate --color --graph'
 alias gcount='git shortlog -sn'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
-alias lol='log --graph --decorate --pretty=oneline --abbrev-commit'
-alias lola='log --graph --decorate --pretty=oneline --abbrev-commit --all'
+alias glol='log --graph --decorate --pretty=oneline --abbrev-commit'
+alias glola='log --graph --decorate --pretty=oneline --abbrev-commit --all'
 
 # Cleaning
 alias ggc='git gc'
