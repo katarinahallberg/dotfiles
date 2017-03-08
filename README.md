@@ -3,7 +3,9 @@
 Originally forked from https://github.com/frippz/dotfiles, so thanks to [Fredrik Frodlund](https://github.com/frippz) for a starting point and help.
 
 *.symlink files will be symlinked in your home folder on when `script/bootstrap` is executed
+
 *.sh files will be executed when `script/install` is executed (no installation files at the moment)
+
 *.zsh files will be run on shell startup
 
 ## Usage
