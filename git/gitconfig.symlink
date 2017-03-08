@@ -1,6 +1,6 @@
 [user]
-  name = Fredrik Frodlund
-  email = fredrik@frodlund.se
+  name = Katarina Hallberg
+  email = katarina.hallberg@jayway.com
 [color]
   diff = auto
   status = auto
@@ -22,7 +22,7 @@
   changed = green
   untracked = cyan
 [core]
-  editor = nvim
+  editor = nano
   excludesfile = ~/.gitignore
   quotepath = false
   autocrlf = input
@@ -37,4 +37,4 @@
   rebase = true
   mergeoptions = --no-ff
 [push]
-  default = current
+  default = simple

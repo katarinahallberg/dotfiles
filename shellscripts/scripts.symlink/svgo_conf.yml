@@ -1,6 +1,0 @@
-plugins:
-  - convertStyleToAttrs
-  - removeUselessDefs
-  - sortAttrs
-  - removeTitle
-  - removeDimensions
