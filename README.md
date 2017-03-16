@@ -33,3 +33,8 @@ $ script/install
 ```
 
 All done!
+
+
+## Known issues
+
+* /Users/katarinahallberg/.dotfiles/zsh/config.zsh:3: no matches found: /Users/katarinahallberg/.dotfiles/functions/*(:t)
